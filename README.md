@@ -1,4 +1,15 @@
-Your Project's Name
+CARIBBEAN RECIPE APP
+---------------------
+In this project, I designed a recipe app for users to add, update, or search for caribbean recipes.
+My late father was from the Caribbean island of Grenada and I was lucky enough to enjoy many family
+holidays on the island in my childhood and later on as an adult with my own family.  I loved the
+fresh fruit and vegetables which were cheap and plentiful, sometimes free!  I loved the recipes that 
+could be created with these wonderful ingredients.
+
+I thought that it would be a good idea to bring produce an app to store
+The app will also provide statistics on the number of times each recipe is used.
+
+
 One or two paragraphs providing an overview of your project.
 
 Essentially, this part is your sales pitch.
