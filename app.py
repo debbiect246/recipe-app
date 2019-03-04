@@ -21,8 +21,18 @@ def login():
 def user(username):
     """Display welcome message"""
     return "<h1>Welcome {0}</h1>".format(username)
+    
+@app.route("/addrecipe")
+def addrecipe():
+    return render_template("addrecipe.html")
 
-
+@app.route("/allrecipeslist")
+def allrecipeslist():
+    return render_template("allrecipeslist.html")
+    
+@app.route("/recipesearch")
+def recipesearch():
+    return render_template("recipesearch.html")    
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
