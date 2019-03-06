@@ -6,13 +6,13 @@ holidays on the island in my childhood and later on as an adult with my own fami
 fresh fruit and vegetables which were cheap and plentiful, sometimes free!  I loved the recipes that 
 could be created with these wonderful ingredients.
 
-I thought that it would be a good idea to bring produce an app to store
-The app will also provide statistics on the number of times each recipe is used.
+I thought that it would be a good idea to bring produce an app to store details of user' favourite recipes
+and it will also be a good place for users to search for other recipes.  Recipes can be categorised
+into breakfast, lunch and dinner recipes and users can rate each recipe for flavour, ease of preparation
+and 
+The app will also provide statistics on the number of times each recipe is used and show user ratings 
+for each user.
 
-
-One or two paragraphs providing an overview of your project.
-
-Essentially, this part is your sales pitch.
 
 UX
 Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
