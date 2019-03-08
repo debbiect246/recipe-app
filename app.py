@@ -1,11 +1,21 @@
 import os
 from datetime import datetime
 from flask import Flask, redirect, render_template, request, session, url_for
-
+from flask_pymongo import PyMongo
+from bson.objectid import ObjectId 
 
 app = Flask(__name__)
 app.secret_key = "randomstring123"
 
+app.config["MONGO_DBNAME"] = 'recipe_manager'
+app.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://localhost')
+
+mongo = PyMongo(app)
+
+@app.route('/')
+@app.route('/get_recipes')
+def get_recipes():
+    return render_template("recipes.html", recipes=mongo.db.recipes.find())
 
 @app.route("/")
 def index():
