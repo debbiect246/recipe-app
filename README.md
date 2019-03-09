@@ -15,9 +15,19 @@ for each user.
 
 
 UX
-Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
 
-In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:
+User stories
+1.	 Each user has a unique username chosen by them and can only add, review, delete and update their own recipes.
+2.	 User can choose a recipe from the database and see a summary view of it. 
+3.	User can choose from 4 main categories of recipes:  breakfast, lunch, dinner and deserts.
+4.	User can also choose from vegetarian, meat based, pescatarian in secondary recipe section and get summary list of each.
+5.	 User can add a recipe to the database.
+6.	 User can delete any of their recipes from the database.
+7.	 User can select a category of recipes to view and select a recipe to view from these.
+8.	 Each recipe has a recipe view page which shows a picture, recipe ingredients and method, number of servings, allergens, recipe author, country of origin of the recipe.
+9.	 User can get a list of each recipe include in each of breakfast, lunch, dinner and dessert recipes.
+10.	 User can see statistics on how often each recipe has been used in a given time period.
+11.	 User can see statistics on ratings for each recipe.
 
 As a user type, I want to perform an action, so that I can achieve a goal.
 This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included in the project itself (in an separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.
@@ -25,6 +35,10 @@ This section is also where you would share links to any wireframes, mockups, dia
 Features
 In this section, you should go over the different parts of your project, and describe each in a sentence or so.
 
+1.  User logs in or needs to register.
+2.  Once logged in user is able to view all the recipes on the database.
+3.  By clicking on each of the breakfast, lunch or dinner pictures, the user is able to look at just the subset of recipes selected.
+4.  The user can then use the search recipe button to find a particular recipe by typing in 
 Existing Features
 Feature 1 - allows users X to achieve Y, by having them fill out Z
 ...
@@ -41,6 +55,10 @@ JQuery
 The project uses JQuery to simplify DOM manipulation.
 Testing
 In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
+
+
+Testing
+-------
 
 Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
 
