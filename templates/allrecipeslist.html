@@ -5,10 +5,10 @@
     <body>
         {% for recipe in recipes %}
             {{recipe.recipe_name}}
-            {{recipe.type}}
-            {{task.task_description}}
-            {{task.is_urgent}}
-            {{task.due_date}}
+            {{recipe.recipe_intro}}
+            {{recipe.recipe_type}}
+            {{recipe.recipe_ingredients}}
+            {{recipe_method}}
         {% endfor %}
     </body>
 </html>
