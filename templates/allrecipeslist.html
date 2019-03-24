@@ -1,5 +1,14 @@
-{% extends 'base.html' %} {% block content %}
-    <h1>All recipes list</h1>
+{<html>
+    <head>
 
-    
-{% endblock %}
+    </head>
+    <body>
+        {% for recipe in recipes %}
+            {{recipe.recipe_name}}
+            {{recipe.type}}
+            {{task.task_description}}
+            {{task.is_urgent}}
+            {{task.due_date}}
+        {% endfor %}
+    </body>
+</html>
