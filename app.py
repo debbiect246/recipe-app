@@ -6,7 +6,6 @@ from bson.objectid import ObjectId
 from config import dbconfig
 from werkzeug.security import generate_password_hash, check_password_hash
 
-
 app = Flask(__name__)
 app.secret_key = "randomstring123"
 
@@ -15,11 +14,7 @@ app.config["MONGO_DBNAME"] = 'recipe_manager'
 app.config["MONGO_URI"] = dbconfig()
 
 mongo = PyMongo(app)
-"""
-@app.route('/')
-@app.route('/get_recipes')
-def get_recipes():
-    return render_template("allrecipeslist.html", recipes=mongo.db.recipes.find())"""
+
 
 @app.route("/")
 def index():
@@ -35,18 +30,29 @@ def login():
 def user(username):
     """Display welcome message"""
     return "<h1>Welcome {0}</h1>".format(username)
-    
+ 
+
+@app.route('/allrecipeslist')
+def allrecipeslist():
+    recipes = mongo.db.recipes.find()
+    return render_template('allrecipeslist.html', recipes=recipes)
+ 
 @app.route("/addrecipe")
 def addrecipe():
-    return render_template("addrecipe.html")
-
-@app.route("/allrecipeslist")
-def allrecipeslist():
-    return render_template("allrecipeslist.html")
-    
+    return render_template("addrecipe.html")   
+  
 @app.route("/recipesearch")
 def recipesearch():
-    return render_template("recipesearch.html")    
+    return render_template("recipesearch.html") 
+    
+@app.route("/editrecipe")
+def editrecipe():
+    return render_template("editrecipe.html")
+    
+@app.route("/deleterecipe")
+def deleterecipe():
+    return render_template("deleterecipe.html")
+
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
