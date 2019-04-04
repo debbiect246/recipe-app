@@ -39,11 +39,13 @@ def allrecipeslist():
  
 @app.route("/addrecipe")
 def addrecipe():
-    return render_template("addrecipe.html")   
+    recipes = mongo.db.recipes.find()
+    return render_template("addrecipe.html", recipes=recipes)   
   
 @app.route("/recipesearch")
 def recipesearch():
-    return render_template("recipesearch.html") 
+    recipes = mongo.db.recipes.find()
+    return render_template("recipesearch.html", recipes=recipes) 
     
 @app.route("/editrecipe")
 def editrecipe():

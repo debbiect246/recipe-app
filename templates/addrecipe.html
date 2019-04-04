@@ -3,12 +3,12 @@
 <div class="row">
     <form action="" method="POST" class="col s12">
         <div class="row">
-            <div class="input-field col s4">
+            <div class="input-field col s3">
                 <i class="material-icons prefix">local_dining</i>
                 <input id="recipe_name" name="recipe_name" type="text">
                 <label for="icon_prefix">Recipe Name</label>
             </div>
-            <div class="input-field col s8">
+            <div class="input-field col s9">
                 <i class="material-icons prefix">subject</i>
                 <textarea name="recipe_introduction" id="recipe introduction" class="materialize-textarea"></textarea>
                 <label for="icon_telephone">Recipe Introduction</label>
@@ -18,14 +18,14 @@
         
         
         <div class="row">
-            <div class="input-field col s4">
+            <div class="input-field col s3">
                 <i class="material-icons prefix">person</i>
-                <textarea name="recipe introduction" id="recipe introduction" class="materialize-textarea"></textarea>
-                <label for="icon_telephone">Recipe suitable for</label>
+                <textarea name="recipe_contains" id="recipe_contains" class="materialize-textarea"></textarea>
+                <label for="icon_telephone">Recipe contains</label>
             </div>
         
         
-            <div class="input-field col s8">
+            <div class="input-field col s9">
                 <i class="material-icons prefix">shopping_basket</i>
                 <textarea name="recipe_ingredients" id="recipe_ingredients" class="materialize-textarea"></textarea>
                 <label for="icon_telephone">Recipe Ingredients</label>
@@ -33,14 +33,14 @@
         </div>
         
         <div class="row">
-            <div class="input-field col s4">
+            <div class="input-field col s3">
                 <i class="material-icons prefix">photo</i>
                 <textarea name="recipe_picture" id="recipe_picture" class="materialize-textarea"></textarea>
                 <label for="icon_telephone">Recipe url</label>
             </div>
         
         
-            <div class="input-field col s8">
+            <div class="input-field col s9">
                 <i class="material-icons prefix">subject</i>
                 <textarea name="recipe_method" id="rcipe_method" class="materialize-textarea"></textarea>
                 <label for="icon_telephone">Recipe Method</label>
@@ -48,14 +48,14 @@
         </div>
         
         <div class="row">
-            <div class="input-field col s4">
+            <div class="input-field col s3">
                 <i class="material-icons prefix">directions_boat</i>
                 <textarea name="recipe_island" id="recipe_island" class="materialize-textarea"></textarea>
                 <label for="icon_telephone">Recipe island</label>
             </div>
         
         
-            <div class="input-field col s8">
+            <div class="input-field col s9">
                 <i class="material-icons prefix">create</i>
                 <textarea name="recipe_author" id="recipe_author" class="materialize-textarea"></textarea>
                 <label for="icon_telephone">Recipe Author</label>
@@ -63,19 +63,75 @@
         </div>
         
         <div class="row">
-            <div class="input-field col s4">
+            <div class="input-field col s3">
                 <i class="material-icons prefix">warning</i>
                 <textarea name="recipe_allergens" id="recipe_allergens" class="materialize-textarea"></textarea>
                 <label for="icon_telephone">Allergens</label>
             </div>
         
         
-            <div class="input-field col s8">
+            <div class="input-field col s3">
                 <i class="material-icons prefix">subject</i>
-                <textarea name="nutritional_info" id="nutritional_info" class="materialize-textarea"></textarea>
-                <label for="icon_telephone">Nutritional Information</label>
+                <textarea name="nutritional_info.number_servings" id="nutritional_info.number_servings" class="materialize-textarea"></textarea>
+                <label for="">Number of servings</label>
             </div>
+            
+            <div class="input-field col s3">
+                <i class="material-icons prefix">subject</i>
+                <textarea name="nutritional_info.calories_per_serve" id="nutritional_info.calories_per_serve" class="materialize-textarea"></textarea>
+                <label for="">Calories per serving</label>
+            </div>
+            
+            <div class="input-field col s3">
+                <i class="material-icons prefix">subject</i>
+                <textarea name="nutritional_info.protein_grammes_per_serve" id="nutritional_info.protein_grammes_per_serve" class="materialize-textarea"></textarea>
+                <label for="">Protein grammes per serving</label>
+            </div>
+            
         </div>
+        
+        <div class="row">
+            <div class="row">
+                <div class="input-field col s3">
+                    <i class="material-icons prefix">access_time</i>
+                    
+                    <select id="recipe_type" name="recipe_type">
+                        <option value="" disabled selected>Choose recipe type</option>
+                        <option value="Lunch">Lunch</option>
+                        <option value="Dinner">Dinner</option>
+                        <option value="Dessert">Dessert</option>
+                    </select>
+                    
+                        <label>recipe_type</label> 
+                    
+                </div>
+                    <div class="input-field col s3">
+                    <i class="material-icons prefix">subject</i>
+                    <textarea name="nutritional_info. fat_grammes_per_serve" id="nutritional_info.fat_grammes_per_serve" class="materialize-textarea"></textarea>
+                    <label for="">Fat grammes per serving</label>
+                </div>
+            
+                <div class="input-field col s3">
+                    <i class="material-icons prefix">subject</i>
+                    <textarea name="nutritional_info.fibre_grammes_per_serve" id="nutritional_info.fibre_grammes_per_serve" class="materialize-textarea"></textarea>
+                    <label for="">Fibre grammes per serving</label>
+                </div>
+                
+                <div class="input-field col s3">
+                    <i class="material-icons prefix">subject</i>
+                    <textarea name="nutritional_info.carb_grammes_per_serve" id="nutritional_info.carb_grammes_per_serve" class="materialize-textarea"></textarea>
+                    <label for="">Carb grammes per serving</label>
+                </div>
+                
+                
+                
+            </div>
+        
+        
+            
+        </div>
+        
+        
     
     </form>
 </div> 
