@@ -54,6 +54,12 @@ def editrecipe():
 @app.route("/deleterecipe")
 def deleterecipe():
     return render_template("deleterecipe.html")
+    
+@app.route('/insert_recipe', methods=['POST'])
+def insert_recipe():
+    recipes = mongo.db.recipes
+    recipes.insert_one(request.form.to_dict())
+    return redirect(url_for('allrecipeslist'))
 
 
 if __name__ == '__main__':

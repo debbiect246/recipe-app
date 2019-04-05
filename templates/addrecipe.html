@@ -1,7 +1,7 @@
 {% extends 'base.html' %} {% block content %}
     <h1>Add Recipe</h1>
 <div class="row">
-    <form action="" method="POST" class="col s12">
+    <form action="{{ url_for('insert_recipe') }}" method="POST"  class="col s12">
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">local_dining</i>
@@ -97,19 +97,19 @@
         
             <div class="input-field col s3">
                 <i class="material-icons prefix">short_text</i>
-                <textarea name="nutritional_info.number_servings" id="nutritional_info.number_servings" class="materialize-textarea"></textarea>
+                <textarea name="number_servings" id="nutritional_info.number_servings" class="materialize-textarea"></textarea>
                 <label for="">Number of servings</label>
             </div>
             
             <div class="input-field col s3">
                 <i class="material-icons prefix">short_text</i>
-                <textarea name="nutritional_info.calories_per_serve" id="nutritional_info.calories_per_serve" class="materialize-textarea"></textarea>
+                <textarea name="calories_per_serve" id="nutritional_info.calories_per_serve" class="materialize-textarea"></textarea>
                 <label for="">Calories per serving</label>
             </div>
             
             <div class="input-field col s3">
                 <i class="material-icons prefix">short_text</i>
-                <textarea name="nutritional_info.protein_grammes_per_serve" id="nutritional_info.protein_grammes_per_serve" class="materialize-textarea"></textarea>
+                <textarea name="protein_grammes_per_serve" id="nutritional_info.protein_grammes_per_serve" class="materialize-textarea"></textarea>
                 <label for="">Protein grammes per serving</label>
             </div>
             
@@ -132,19 +132,19 @@
                 </div>
                     <div class="input-field col s3">
                     <i class="material-icons prefix">short_text</i>
-                    <textarea name="nutritional_info. fat_grammes_per_serve" id="nutritional_info.fat_grammes_per_serve" class="materialize-textarea"></textarea>
+                    <textarea name="fat_grammes_per_serve" id="nutritional_info.fat_grammes_per_serve" class="materialize-textarea"></textarea>
                     <label for="">Fat grammes per serving</label>
                 </div>
             
                 <div class="input-field col s3">
                     <i class="material-icons prefix">short_text</i>
-                    <textarea name="nutritional_info.fibre_grammes_per_serve" id="nutritional_info.fibre_grammes_per_serve" class="materialize-textarea"></textarea>
+                    <textarea name="fibre_grammes_per_serve" id="nutritional_info.fibre_grammes_per_serve" class="materialize-textarea"></textarea>
                     <label for="">Fibre grammes per serving</label>
                 </div>
                 
                 <div class="input-field col s3">
                     <i class="material-icons prefix">short_text</i>
-                    <textarea name="nutritional_info.carb_grammes_per_serve" id="nutritional_info.carb_grammes_per_serve" class="materialize-textarea"></textarea>
+                    <textarea name="carb_grammes_per_serve" id="nutritional_info.carb_grammes_per_serve" class="materialize-textarea"></textarea>
                     <label for="">Carb grammes per serving</label>
                 </div>
                 
@@ -155,7 +155,11 @@
         
             
         </div>
-        
+        <div class="row">
+            <button class="btn waves-effect waves-light" type="submit" name="action">Add Recipe
+                <i class="material-icons right">playlist_add</i>
+             </button>
+        </div>
         
     
     </form>
