@@ -60,6 +60,14 @@ def insert_recipe():
     recipes = mongo.db.recipes
     recipes.insert_one(request.form.to_dict())
     return redirect(url_for('allrecipeslist'))
+    
+@app.route('/log_out')
+def log_out():
+    if session:
+        session.clear()
+        return render_template("logout.html")
+    else:
+        return redirect(url_for("index"))
 
 
 if __name__ == '__main__':
