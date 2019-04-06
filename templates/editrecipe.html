@@ -1,0 +1,43 @@
+
+{% extends 'base.html' %}
+{% block content %} 
+
+<h1>Edit a Recipe</h1>
+
+    <ul class="collapsible" data-collapsible="accordion">
+        {% for r in recipes %}
+        <li>
+            <div class="collapsible-header">
+
+                <div class=" recipe_header col s9">
+                    <i class="material-icons">expand_more</i><strong>{{r.recipe_name}}</strong> - {{r.recipe_intro}}
+                </div>
+            </div>
+            
+            <div class="collapsible-body">
+                <span>
+                    <img src="{{r.recipe_picture}}" alt="{{r.recipe_name}}">
+                </span>
+            </div>
+            
+            
+            <div class="collapsible-body">
+                <span>
+                    {{r.recipe_ingredients}}
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <span>
+                    {{r.method}}
+                </span>
+            </div>
+            
+            
+            
+            
+            
+        </li>
+        {% endfor %}
+    </ul> 
+    
+{% endblock %}

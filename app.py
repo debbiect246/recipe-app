@@ -49,7 +49,9 @@ def recipesearch():
     
 @app.route("/editrecipe")
 def editrecipe():
-    return render_template("editrecipe.html")
+    recipes = mongo.db.recipes.find()
+    return render_template('editrecipe.html', recipes=recipes)
+ 
     
 @app.route("/deleterecipe")
 def deleterecipe():
