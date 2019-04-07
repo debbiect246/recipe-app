@@ -3,7 +3,7 @@
 {% block content %} 
 
 <div class="row">
-    <h1>Edit a Recipe</h1>
+    <h1>Caribbean Recipes</h1>
 </div>
 
     <ul class="collapsible" data-collapsible="accordion">
@@ -14,7 +14,7 @@
                 <div class=" recipe_header col s9">
                     <i class="material-icons">expand_more</i><strong>{{r.recipe_name}}</strong> - {{r.recipe_intro}}
                     
-                    <span>This recipe is best eaten for : ....
+                    <span>This recipe is best eaten for : 
                     {{r.recipe_type}}
                 </span>
                 </div>
@@ -24,6 +24,7 @@
                 <span>
                     <img src="{{r.recipe_picture}}" alt="{{r.recipe_name}}">
                 </span>
+                <a href={{url_for('editrecipe', recipe_id = r._id)}}>editrecipe</a>
             </div>
             
             
@@ -48,7 +49,7 @@
             </div>
             
             <div class="collapsible-body">
-                <span>This recipe contains: 
+                <span>This recipe contains  
                     {{r.recipe_contains}}
                 </span>
                 <span><strong>  and has these allergens:  * </strong>   

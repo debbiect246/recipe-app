@@ -9,7 +9,6 @@ from werkzeug.security import generate_password_hash, check_password_hash
 app = Flask(__name__)
 app.secret_key = "randomstring123"
 
-
 app.config["MONGO_DBNAME"] = 'recipe_manager'
 app.config["MONGO_URI"] = dbconfig()
 
@@ -40,28 +39,55 @@ def allrecipeslist():
 @app.route("/addrecipe")
 def addrecipe():
     recipes = mongo.db.recipes.find()
-    return render_template("addrecipe.html", recipes=recipes)   
-  
-@app.route("/recipesearch")
-def recipesearch():
-    recipes = mongo.db.recipes.find()
-    return render_template("recipesearch.html", recipes=recipes) 
-    
-@app.route("/editrecipe")
-def editrecipe():
-    recipes = mongo.db.recipes.find()
-    return render_template('editrecipe.html', recipes=recipes)
- 
-    
-@app.route("/deleterecipe")
-def deleterecipe():
-    return render_template("deleterecipe.html")
+    return render_template("addrecipe.html", recipes=recipes) 
     
 @app.route('/insert_recipe', methods=['POST'])
 def insert_recipe():
     recipes = mongo.db.recipes
     recipes.insert_one(request.form.to_dict())
     return redirect(url_for('allrecipeslist'))
+
+
+@app.route("/editrecipe/<recipe_id>")
+def editrecipe(recipe_id):
+    """recipes = mongo.db.recipes"""
+    the_recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    """islands = mongo.db.islands"""
+    recipe_island=the_recipe["recipe_island"]
+    all_islands = mongo.db.islands.find_one({"recipe_island": recipe_island})
+    return render_template('editrecipe.html', recipe=the_recipe, islands=all_islands)
+
+@app.route('/update_recipe/<recipe_id>', methods=["POST"])
+def update_recipe(recipe_id):
+    recipes = mongo.db.recipes
+    recipes.update( {'_id': ObjectId(recipe_id)},
+    {
+        'recipe_name':request.form.get('recipe_name'),
+        'recipe_island':request.form.get('recipe_island'),
+        'recipe_intro': request.form.get('recipe_intro'),
+        'recipe_ingredients': request.form.get('recipe_ingredients'),
+        'recipe_picture':request.form.get('recipe_picture'),
+        'method':request.form.get('method'),
+        'allergens':request.form.get('allergens'),
+        'recipe_author':request.form.get('recipe_author'),
+        'recipe_contains':request.form.get('recipe_contains'),
+        'nutritional_info.number_servings':request.form.get('nutritional_info.number_sevings'),
+        'nutritional_info.calories_per_serve':request.form.get('nutritional_info.calories_per_serve'),
+        'nutritional_info.protein_grammes_per_serve':request.form.get('nutritional_info.protein_grammes_per_serve'),
+        'nutritional_info.fat_grammes_per_serve':request.form.get('nutritional_info.fat_grammes_per_serve'),
+        'nutritional_info.fibre_grammes_per_serve':request.form.get('nutritional_info.fibre_grammes_per_serve'),
+        'nutritional_info.carb_grammes_per_serve':request.form.get('nutritional_info.carb_grammes_per_serve')
+        
+         
+    })
+    return redirect(url_for('editrecipe'))
+   
+    
+@app.route("/deleterecipe")
+def deleterecipe():
+    return render_template("deleterecipe.html")
+    
+
     
 @app.route('/log_out')
 def log_out():
@@ -71,7 +97,7 @@ def log_out():
     else:
         return redirect(url_for("index"))
 
-
+ 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),
