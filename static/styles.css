@@ -78,6 +78,7 @@ body {
 
 @media screen and (min-width: 500px) {
   .pageheader {
+    margin-top: 5px;
     float: none;
     display: block;
     text-align: center;

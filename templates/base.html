@@ -17,18 +17,20 @@
 
 <body>
     <!-- Navigation --> 
-    <nav class="navigation col s12">
-        <ul>
-            <li><a href="{{ url_for('index') }}">Log out</a></li>
-            <li><a href="{{ url_for('allrecipeslist') }}">All Recipes</a></li>
-            <li><a href="{{ url_for('recipesearch') }}">Search Recipes</a></li>
-            <li><a href="{{ url_for('addrecipe') }}">Add Recipe</a></li>
-            <li><a href="{{ url_for('editrecipe') }}">Edit Recipe</a></li>
-            <li><a href="{{ url_for('deleterecipe') }}">Delete Recipe</a></li>
+    <div class="row">
+        <nav class="navigation">
+            <ul>
+                <li><a href="{{ url_for('index') }}">Log out</a></li>
+                <li><a href="{{ url_for('allrecipeslist') }}">All Recipes</a></li>
+                <li><a href="{{ url_for('recipesearch') }}">Search Recipes</a></li>
+                <li><a href="{{ url_for('addrecipe') }}">Add Recipe</a></li>
+                <li><a href="{{ url_for('editrecipe') }}">Edit Recipe</a></li>
+                <li><a href="{{ url_for('deleterecipe') }}">Delete Recipe</a></li>
             
             
-        </ul>
-    </nav>
+            </ul>
+        </nav>
+    </div>
     
     {% block content %} {% endblock %}
     
