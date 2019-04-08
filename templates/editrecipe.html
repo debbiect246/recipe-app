@@ -13,7 +13,7 @@
             
             <div class="input-field col s12">
                 <i class="material-icons prefix">subject</i>
-                <textarea name="recipe_introduction" id="recipe introduction" class="materialize-textarea"></textarea>
+                <textarea name="recipe_introduction" id="recipe introduction" class="materialize-textarea"> {{recipe.recipe_intro}}</textarea>
                 <label for="recipe_intro">Recipe Introduction</label>
             </div>
             
@@ -41,7 +41,7 @@
         
             <div class="input-field col s9">
                 <i class="material-icons prefix">shopping_basket</i>
-                <textarea name="recipe_ingredients" id="recipe_ingredients" class="materialize-textarea"></textarea>
+                <textarea name="recipe_ingredients" id="recipe_ingredients" class="materialize-textarea">{{recipe.recipe_ingredients}}</textarea>
                 <label for="recipe_ingredients">Recipe Ingredients</label>
             </div>
         </div>
@@ -49,14 +49,14 @@
         <div class="row">
             <div class="input-field col s3">
                 <i class="material-icons prefix">photo</i>
-                <textarea name="recipe_picture" id="recipe_picture" class="materialize-textarea"></textarea>
+                <textarea name="recipe_picture" id="recipe_picture" class="materialize-textarea"> {{recipe.recipe_picture}}</textarea>
                 <label for="recipe_picture">Recipe url</label>
             </div>
         
         
             <div class="input-field col s9">
                 <i class="material-icons prefix">subject</i>
-                <textarea name="method" id="method" class="materialize-textarea"></textarea>
+                <textarea name="method" id="method" class="materialize-textarea">{{recipe.method}}</textarea>
                 <label for="method">Method</label>
             </div>
         </div>
@@ -64,14 +64,14 @@
         <div class="row">
             <div class="input-field col s3">
                 <i class="material-icons prefix">directions_boat</i>
-                <textarea name="recipe_island" id="recipe_island" class="materialize-textarea"></textarea>
+                <textarea name="recipe_island" id="recipe_island" class="materialize-textarea">{{recipe.recipe_island}}</textarea>
                 <label for="recipe_island">Recipe island</label>
             </div>
         
         
             <div class="input-field col s9">
                 <i class="material-icons prefix">create</i>
-                <textarea name="recipe_author" id="recipe_author" class="materialize-textarea"></textarea>
+                <textarea name="recipe_author" value="jamaica" id="recipe_author" class="materialize-textarea">{{recipe.recipe_author}}</textarea>
                 <label for="recipe_author">Recipe Author</label>
             </div>
         </div>
@@ -98,19 +98,19 @@
         
             <div class="input-field col s3">
                 <i class="material-icons prefix">short_text</i>
-                <textarea name="number_servings" id="nutritional_info.number_servings" class="materialize-textarea"></textarea>
+                <textarea name="number_servings" id="nutritional_info.number_servings" class="materialize-textarea">{{recipe.nutritional_info.number_servings}}</textarea>
                 <label for="">Number of servings</label>
             </div>
             
             <div class="input-field col s3">
                 <i class="material-icons prefix">short_text</i>
-                <textarea name="calories_per_serve" id="nutritional_info.calories_per_serve" class="materialize-textarea"></textarea>
+                <textarea name="calories_per_serve" id="nutritional_info.calories_per_serve" class="materialize-textarea">{{recipe.nutritional_info.calories_per_serve}}</textarea>
                 <label for="">Calories per serving</label>
             </div>
             
             <div class="input-field col s3">
                 <i class="material-icons prefix">short_text</i>
-                <textarea name="protein_grammes_per_serve" id="nutritional_info.protein_grammes_per_serve" class="materialize-textarea"></textarea>
+                <textarea name="protein_grammes_per_serve" id="nutritional_info.protein_grammes_per_serve" class="materialize-textarea">{{recipe.nutritional_info.protein_grammes_per_serve}}</textarea>
                 <label for="">Protein grammes per serving</label>
             </div>
             
@@ -133,19 +133,19 @@
                 </div>
                     <div class="input-field col s3">
                     <i class="material-icons prefix">short_text</i>
-                    <textarea name="fat_grammes_per_serve" id="nutritional_info.fat_grammes_per_serve" class="materialize-textarea"></textarea>
+                    <textarea name="fat_grammes_per_serve" id="nutritional_info.fat_grammes_per_serve" class="materialize-textarea">{{recipe.nutritional_info.fat_grammes_per_serve}}</textarea>
                     <label for="">Fat grammes per serving</label>
                 </div>
             
                 <div class="input-field col s3">
                     <i class="material-icons prefix">short_text</i>
-                    <textarea name="fibre_grammes_per_serve" id="nutritional_info.fibre_grammes_per_serve" class="materialize-textarea"></textarea>
+                    <textarea name="fibre_grammes_per_serve" id="nutritional_info.fibre_grammes_per_serve" class="materialize-textarea">{{recipe.nutritional_info.fibre_grammes_per_serve}}</textarea>
                     <label for="">Fibre grammes per serving</label>
                 </div>
                 
                 <div class="input-field col s3">
                     <i class="material-icons prefix">short_text</i>
-                    <textarea name="carb_grammes_per_serve" id="nutritional_info.carb_grammes_per_serve" class="materialize-textarea"></textarea>
+                    <textarea name="carb_grammes_per_serve" id="nutritional_info.carb_grammes_per_serve" class="materialize-textarea">{{recipe.nutritional_info.carb_grammes_per_serve}}</textarea>
                     <label for="">Carb grammes per serving</label>
                 </div>
                 
@@ -157,7 +157,7 @@
             
         </div>
         <div class="row">
-            <button class="btn waves-effect waves-light" type="submit" name="action">Add Recipe
+            <button class="btn waves-effect waves-light" type="submit" name="action">Update Recipe
                 <i class="material-icons right">playlist_add</i>
              </button>
         </div>

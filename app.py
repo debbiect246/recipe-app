@@ -50,12 +50,8 @@ def insert_recipe():
 
 @app.route("/editrecipe/<recipe_id>")
 def editrecipe(recipe_id):
-    """recipes = mongo.db.recipes"""
     the_recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
-    """islands = mongo.db.islands"""
-    recipe_island=the_recipe["recipe_island"]
-    all_islands = mongo.db.islands.find_one({"recipe_island": recipe_island})
-    return render_template('editrecipe.html', recipe=the_recipe, islands=all_islands)
+    return render_template('editrecipe.html', recipe=the_recipe)
 
 @app.route('/update_recipe/<recipe_id>', methods=["POST"])
 def update_recipe(recipe_id):
