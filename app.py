@@ -69,14 +69,15 @@ def update_recipe(recipe_id):
         'allergens':request.form.get('allergens'),
         'recipe_author':request.form.get('recipe_author'),
         'recipe_contains':request.form.get('recipe_contains'),
-        'nutritional_info.number_servings':request.form.get('nutritional_info.number_servings'),
-        'nutritional_info.calories_per_serve':request.form.get('nutritional_info.calories_per_serve'),
-        'nutritional_info.protein_grammes_per_serve':request.form.get('nutritional_info.protein_grammes_per_serve'),
-        'nutritional_info.fat_grammes_per_serve':request.form.get('nutritional_info.fat_grammes_per_serve'),
-        'nutritional_info.fibre_grammes_per_serve':request.form.get('nutritional_info.fibre_grammes_per_serve'),
-        'nutritional_info.carb_grammes_per_serve':request.form.get('nutritional_info.carb_grammes_per_serve')
-        
-         
+        'nutritional_info' : {
+        'number_servings':request.form.get('nutritional_info.number_servings'),
+        'calories_per_serve':request.form.get('nutritional_info.calories_per_serve'),
+        'protein_grammes_per_serve':request.form.get('nutritional_info.protein_grammes_per_serve'),
+        'fat_grammes_per_serve':request.form.get('nutritional_info.fat_grammes_per_serve'),
+        'fibre_grammes_per_serve':request.form.get('nutritional_info.fibre_grammes_per_serve'),
+        'carb_grammes_per_serve':request.form.get('nutritional_info.carb_grammes_per_serve'),
+        }
+
     })
     return redirect(url_for('allrecipeslist'))
    
@@ -84,6 +85,11 @@ def update_recipe(recipe_id):
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
     mongo.db.recipes.remove({'_id': ObjectId(recipe_id)})
+    return redirect(url_for('allrecipeslist'))
+    
+@app.route("/findrecipe/<recipe_id>")
+def findrecipe(recipe_id):
+    the_recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     return redirect(url_for('allrecipeslist'))
 
     
