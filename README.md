@@ -29,25 +29,31 @@ User stories
 10.	 User can see statistics on how often each recipe has been used in a given time period.
 11.	 User can see statistics on ratings for each recipe.
 
-As a user type, I want to perform an action, so that I can achieve a goal.
-This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included in the project itself (in an separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.
+Wireframes are shown in my UX folder.
+
 
 Features
 In this section, you should go over the different parts of your project, and describe each in a sentence or so.
+1.	 Each user has a unique username chosen by them and can only add, review, delete and update their own recipes.  Sill working on login facility.
+2.	 User can choose a recipe from the database and see a summary view of it. Done on allrecipes.html page
+3.	User can choose from 3 main categories of recipes:  lunch, dinner and deserts.
+4.	User can also choose from vegetarian, meat based, pescatarian in secondary recipe section and get summary list of each.
+5.	 User can add a recipe to the database.  Done on addrecipe.html page.
+6.	 User can delete any of their recipes from the database.
+7.	 Each recipe has a recipe view which shows a picture, recipe ingredients and method, number of servings, allergens, recipe author, country of origin of the recipe.
 
-1.  User logs in or needs to register.
-2.  Once logged in user is able to view all the recipes on the database.
-3.  By clicking on each of the breakfast, lunch or dinner pictures, the user is able to look at just the subset of recipes selected.
-4.  The user can then use the search recipe button to find a particular recipe by typing in 
-Existing Features
-Feature 1 - allows users X to achieve Y, by having them fill out Z
-...
-For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
 
 In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
 
+In the future I can add statistical pages showing ratings for each recipe.
+
 Features Left to Implement
+
+Statistics on ratings for each recipe.
+Bar charts showing the number of calories in each recipe.
+
 Another feature idea
+
 Technologies Used
 In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
 

@@ -70,6 +70,10 @@ body {
     
 }
 
+h4{
+    padding: 0 0.5em;
+}
+
 @media(min-width:560px){
     navigation{
         width:100%;

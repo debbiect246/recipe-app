@@ -1,11 +1,11 @@
 {% extends 'base.html' %} {% block content %}
     <h1>Edit Recipe</h1>
 <div class="row">
-    <form action={{ url_for('update_recipe', recipe_id=recipe_id) }} method="POST"  class="col s12">
+    <form action="{{ url_for('update_recipe', recipe_id=recipe._id) }}" method="POST"  class="col s12">
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">local_dining</i>
-                <a href="{{url_for('editrecipe', recipe_id=recipe._id)}}" class="waves-effect waves-light btn btn_small blue">Edit</a>
+               
                 <input id="recipe_name" name="recipe_name" type="text">
                 <label for="recipe_name">{{recipe.recipe_name}}</label>
             </div>
@@ -165,6 +165,9 @@
     
     </form>
 </div> 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 
     
 {% endblock %}

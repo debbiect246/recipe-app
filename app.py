@@ -20,6 +20,8 @@ def index():
     """Main page"""
     return render_template("index.html")
     
+
+    
 @app.route("/", methods = ["POST"])
 def login():
     session["username"]=request.form["username"]
@@ -67,7 +69,7 @@ def update_recipe(recipe_id):
         'allergens':request.form.get('allergens'),
         'recipe_author':request.form.get('recipe_author'),
         'recipe_contains':request.form.get('recipe_contains'),
-        'nutritional_info.number_servings':request.form.get('nutritional_info.number_sevings'),
+        'nutritional_info.number_servings':request.form.get('nutritional_info.number_servings'),
         'nutritional_info.calories_per_serve':request.form.get('nutritional_info.calories_per_serve'),
         'nutritional_info.protein_grammes_per_serve':request.form.get('nutritional_info.protein_grammes_per_serve'),
         'nutritional_info.fat_grammes_per_serve':request.form.get('nutritional_info.fat_grammes_per_serve'),
@@ -76,13 +78,13 @@ def update_recipe(recipe_id):
         
          
     })
-    return redirect(url_for('editrecipe'))
+    return redirect(url_for('allrecipeslist'))
    
     
-@app.route("/deleterecipe")
-def deleterecipe():
-    return render_template("deleterecipe.html")
-    
+@app.route("/delete_recipe/<recipe_id>")
+def delete_recipe(recipe_id):
+    mongo.db.recipes.remove({'_id': ObjectId(recipe_id)})
+    return redirect(url_for('allrecipeslist'))
 
     
 @app.route('/log_out')

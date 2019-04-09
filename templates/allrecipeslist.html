@@ -24,7 +24,8 @@
                 <span>
                     <img src="{{r.recipe_picture}}" alt="{{r.recipe_name}}">
                 </span>
-                <a href={{url_for('editrecipe', recipe_id = r._id)}}><strong><h3>EDIT THIS RECIPE</h3></strong></a>
+                <a href="{{url_for('delete_recipe', recipe_id=r._id)}}" class="waves-effect waves-light btn btn_small">Delete Recipe</a>
+                <a href="{{url_for('editrecipe', recipe_id=r._id)}}" class="waves-effect waves-light btn btn_small blue">Edit Recipe</a>
             </div>
             
             
