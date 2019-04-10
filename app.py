@@ -86,18 +86,24 @@ def update_recipe(recipe_id):
 def delete_recipe(recipe_id):
     mongo.db.recipes.remove({'_id': ObjectId(recipe_id)})
     return redirect(url_for('allrecipeslist'))
-    
+ 
+"""   
 @app.route("/findrecipe/<recipe_type>")
 def findrecipe(recipe_type):
-    the_recipe = mongo.db.recipes.find({"recipe_type": ObjectId(recipe_type)})
-    return render_template('findrecipe.html', recipe=the_recipe)
+    lunch_recipes = mongo.db.recipes.find({"recipe_type": ObjectId(recipe_type)}) """
     
+    
+@app.route("/findrecipe")
+def findrecipe():
+    return render_template('findrecipe.html')
+    
+
+"""    
 @app.route("/search_recipe/<recipe_type>")
 def search_recipe(recipe_type):
     lunch_recipes = mongo.db.recipes.find({"recipe_type": "Lunch"})
     return render_template('findrecipe.html', recipe=lunch_recipes)
-    
-
+"""
     
 @app.route('/log_out')
 def log_out():
