@@ -1,4 +1,3 @@
-
 {% extends 'base.html' %}
 {% block content %} 
 
@@ -43,7 +42,6 @@
             <div class="collapsible-body">
                 <span>This recipe comes from: 
                     {{r.recipe_island}}
-                    <a href={{url_for('islands', recipe_island=r.recipe_island  )}}>Recipe Island</a>
                 </span>
                 <span>  and can be found in   
                     {{r.recipe_author}}

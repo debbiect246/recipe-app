@@ -37,6 +37,13 @@ def user(username):
 def allrecipeslist():
     recipes = mongo.db.recipes.find()
     return render_template('allrecipeslist.html', recipes=recipes)
+    
+@app.route('/islands/<recipe_island>', methods=["GET","POST"])
+def islands(recipe_island):
+    print(recipe_island)
+    this_island= mongo.db.islands.find_one({'recipe_island':recipe_island})
+    return render_template('islands.html', this_island=this_island)
+    
  
 @app.route("/addrecipe")
 def addrecipe():
@@ -92,10 +99,27 @@ def delete_recipe(recipe_id):
 def findrecipe(recipe_type):
     lunch_recipes = mongo.db.recipes.find({"recipe_type": ObjectId(recipe_type)}) """
     
-    
+"""  this works 
 @app.route("/findrecipe")
 def findrecipe():
-    return render_template('findrecipe.html')
+    return render_template('findrecipe.html') """
+    
+
+    
+@app.route("/findrecipe", methods=['GET', 'POST'])
+def findrecipe():
+    recipes=mongo.db.recipes
+    if request.method == 'POST':
+        requested_type = request.form.get("recipe_type")
+        print(requested_type)
+        recipes = mongo.db.recipes.find({"recipe_type": requested_type})
+        return render_template("results.html", recipes=recipes)
+        
+    return render_template("findrecipe.html")
+		
+@app.route("/results")
+def displayresults():
+    return render_template('results.html')	
     
 
 """    

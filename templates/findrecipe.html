@@ -1,15 +1,24 @@
 {% extends 'base.html' %} {% block content %}
     <h1>Find Recipe</h1>
 <div class="row">
-    <h2> Choose to find Lunch, dinner or dessert recipes</h2>
+    <h5> Choose to find Lunch, dinner or dessert recipes</h5>
 
 
-    <form action="{{ url_for('findrecipe', recipe_type=recipe_type) }}" method=["GET,"POST"  class="col s12">
+    <form action="{{ url_for('findrecipe')}}" method="POST"  class="col s6">
         <div class="row">
-            <div class="input-field col s12">
-                <i class="material-icons prefix">local_dining</i>
+            <div class="input-field col s6">
+                <i class="material-icons prefix">access_time</i>
+                    
+                    <select id="recipe_type" name="recipe_type">
+                        <option value="" disabled selected>Choose recipe type</option>
+                        <option value="Lunch">Lunch</option>
+                        <option value="Dinner">Dinner</option>
+                        <option value="Dessert">Dessert</option>
+                    </select>
+                    
+                        <label>recipe_type</label> 
                 <input id="recipe_type" name="recipe_type" type="text">
-                <label for="recipe_type">Enter Recipe Type</label>
+                
             </div>
    
     <div class="row">
