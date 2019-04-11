@@ -15,12 +15,14 @@ app.config["MONGO_URI"] = dbconfig()
 mongo = PyMongo(app)
 
 
+#route for home page
 @app.route("/")
 def index():
     """Main page"""
     return render_template("index.html")
     
 
+#route for eventual log in page
     
 @app.route("/", methods = ["POST"])
 def login():
@@ -32,18 +34,22 @@ def user(username):
     """Display welcome message"""
     return "<h1>Welcome {0}</h1>".format(username)
  
+#route to display all recipes in summary and expanded form with accordion dropdown
 
 @app.route('/allrecipeslist')
 def allrecipeslist():
     recipes = mongo.db.recipes.find()
     return render_template('allrecipeslist.html', recipes=recipes)
-    
+
+#route to display recipe island - user clicks on this from all recipes page
+
 @app.route('/islands/<recipe_island>', methods=["GET","POST"])
 def islands(recipe_island):
     print(recipe_island)
     this_island= mongo.db.islands.find_one({'recipe_island':recipe_island})
     return render_template('islands.html', this_island=this_island)
-    
+
+#route for page where user can add a recipe    
  
 @app.route("/addrecipe")
 def addrecipe():
@@ -56,6 +62,7 @@ def insert_recipe():
     recipes.insert_one(request.form.to_dict())
     return redirect(url_for('allrecipeslist'))
 
+#route for edit recipe page
 
 @app.route("/editrecipe/<recipe_id>")
 def editrecipe(recipe_id):
@@ -87,25 +94,16 @@ def update_recipe(recipe_id):
 
     })
     return redirect(url_for('allrecipeslist'))
-   
+ 
+#route for delete recipe page - user access this from all recipes list page  
     
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
     mongo.db.recipes.remove({'_id': ObjectId(recipe_id)})
     return redirect(url_for('allrecipeslist'))
- 
-"""   
-@app.route("/findrecipe/<recipe_type>")
-def findrecipe(recipe_type):
-    lunch_recipes = mongo.db.recipes.find({"recipe_type": ObjectId(recipe_type)}) """
-    
-"""  this works 
-@app.route("/findrecipe")
-def findrecipe():
-    return render_template('findrecipe.html') """
-    
 
-    
+#route for find recipe page - user can search for lunch, dinner, dessert recipes, allergens, recipes from specified islands. 
+
 @app.route("/findrecipe", methods=['GET', 'POST'])
 def findrecipe():
     recipes=mongo.db.recipes
@@ -116,18 +114,14 @@ def findrecipe():
         return render_template("results.html", recipes=recipes)
         
     return render_template("findrecipe.html")
+
+#route for page to display results of searches
 		
 @app.route("/results")
 def displayresults():
     return render_template('results.html')	
     
-
-"""    
-@app.route("/search_recipe/<recipe_type>")
-def search_recipe(recipe_type):
-    lunch_recipes = mongo.db.recipes.find({"recipe_type": "Lunch"})
-    return render_template('findrecipe.html', recipe=lunch_recipes)
-"""
+#route for eventual log out page
     
 @app.route('/log_out')
 def log_out():
@@ -137,6 +131,7 @@ def log_out():
     else:
         return redirect(url_for("index"))
 
+# instructions to run app
  
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),

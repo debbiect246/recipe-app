@@ -3,13 +3,20 @@
 {% block content %} 
 
 <div class="row">
-    <h1>Caribbean Island for this recipe</h1>
+    <h1>Caribbean Island for this recipe is {{this_island.recipe_island}}</h1>
 </div>
 
 
-     <div class="row">
-         This is is the island of {{this_island.recipe_island}}
-     </div>
+    <div class="row">
+         This is the island of {{this_island.recipe_island}}
+         <img src="{{this_island.island_url}}" alt="{{this_island.island_url}}">
+    </div>
+     
+    <div class="row">
+         {{this_island.recipe_island}} has a population of {{this_island.island_population}} people
+    </div>     
+    
+     
 
 
     
