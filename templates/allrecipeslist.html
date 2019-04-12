@@ -7,9 +7,9 @@
 
 {% for r in recipes %}
     
-    <div class="card" class="col s3">
+    <div class="card">
     
-        <div class="card-image waves-effect waves-block waves-light" >
+        <div>
           <img class="activator" src="{{r.recipe_picture}}">
         </div>
     
@@ -21,7 +21,7 @@
         <div class="card-reveal">
           <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i><strong>{{r.recipe_name}}</strong></span>
           <p>This recipe contains these allergens <strong>{{r.allergens}}</strong></p>
-          <p>Ingredients needed for this recipe.  {{r.recipe_ingredients}}</p>
+          <p class="col s6">Ingredients needed for this recipe.  {{r.recipe_ingredients}}</p>
           <p>Here's how you make {{r.recipe_name}}.  {{r.method}}</p>
           <p>This recipe makes {{r.nutritional_info.number_servings}} servings and each serving has:</p>
           <p>{{r.nutritional_info.calories_per_serve}} calories.</p>
