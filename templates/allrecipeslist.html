@@ -8,19 +8,25 @@
 {% for r in recipes %}
     
     <div class="card">
+      
+        <div class="recipecolumn">
     
-        <div>
-          <img class="activator" src="{{r.recipe_picture}}">
-        </div>
+          <div>
+            <img class="activator" src="{{r.recipe_picture}}">
+          </div>
     
-        <div class="card-content">
-          <span class="card-title activator grey-text text-darken-4">{{r.recipe_name}}<i class="material-icons right">more_vert</i></span>
-          <p><a href="#">This recipe is best eaten for {{r.recipe_type}}</a></p>
+          <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4"><strong>{{r.recipe_name}}</strong><i class="material-icons right">more_vert</i></span>
+            <p><a href="#">This recipe is best eaten for {{r.recipe_type}}</a></p>
+            <p>This recipe contains these allergens <strong>{{r.allergens}}</strong></p>
+            
+          </div>
+          
         </div>
     
         <div class="card-reveal">
           <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i><strong>{{r.recipe_name}}</strong></span>
-          <p>This recipe contains these allergens <strong>{{r.allergens}}</strong></p>
+          
           <p class="col s6">Ingredients needed for this recipe.  {{r.recipe_ingredients}}</p>
           <p>Here's how you make {{r.recipe_name}}.  {{r.method}}</p>
           <p>This recipe makes {{r.nutritional_info.number_servings}} servings and each serving has:</p>

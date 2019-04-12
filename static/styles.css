@@ -25,11 +25,6 @@
   background-color: orange;
 }
 
-.loginphoto{
-   display: block;
-   margin-left: auto;
-   margin-right: auto;
-}
 
 
 body {
@@ -38,7 +33,7 @@ body {
     }
     
 
-img{
+img {
    width: 250px;
    height: 250px;
    margin:auto;
@@ -51,9 +46,21 @@ img{
   
 }
 
+img loginphoto{
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   height: 400px;
+   width: 500px;
+}
 
+.recipecolumn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
 
-/* styling main headinge */
+/* styling main heading */
 h1{
   color: orange;
   text-align:center;
