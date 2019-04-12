@@ -13,29 +13,35 @@
           <img class="activator" src="{{r.recipe_picture}}">
         </div>
     
-    <div class="card-content">
-      <span class="card-title activator grey-text text-darken-4">{{r.recipe_name}}<i class="material-icons right">more_vert</i></span>
-      <p><a href="#">This recipe is best eaten for {{r.recipe_type}}</a></p>
-    </div>
+        <div class="card-content">
+          <span class="card-title activator grey-text text-darken-4">{{r.recipe_name}}<i class="material-icons right">more_vert</i></span>
+          <p><a href="#">This recipe is best eaten for {{r.recipe_type}}</a></p>
+        </div>
     
-    <div class="card-reveal">
-      <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i><strong>{{r.recipe_name}}</strong></span>
-      <p>Ingredients needed for this recipe.  {{r.recipe_ingredients}}</p>
-      <p>Here's how you make {{r.recipe_name}}.  {{r.method}}</p>
-      <p>This recipe makes {{r.nutritional_info.number_servings}} servings and each serving has:</p>
-      <p>{{r.nutritional_info.calories_per_serve}} calories.</p>
-      <p>{{r.nutritional_info.protein_grammes_per_serve}} grammes of protein,</p>
-      <p>{{r.nutritional_info.fat_grammes_per_serve}} grammes of fat,</p>
-      <p>{{r.nutritional_info.fibre_grammes_per_serve}} grammes of fibre and </p>
-      <p>{{r.nutritional_info.carb_grammes_per_serve}} grammes of carbohydrate. </p>
-      <p>This recipe comes from the Caribbean island of {{r.recipe_island}}</p>
-      <a href={{url_for('islands', recipe_island=r.recipe_island  )}}>More Information on this Island</a>
+        <div class="card-reveal">
+          <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i><strong>{{r.recipe_name}}</strong></span>
+          <p>This recipe contains these allergens <strong>{{r.allergens}}</strong></p>
+          <p>Ingredients needed for this recipe.  {{r.recipe_ingredients}}</p>
+          <p>Here's how you make {{r.recipe_name}}.  {{r.method}}</p>
+          <p>This recipe makes {{r.nutritional_info.number_servings}} servings and each serving has:</p>
+          <p>{{r.nutritional_info.calories_per_serve}} calories.</p>
+          <p>{{r.nutritional_info.protein_grammes_per_serve}} grammes of protein,</p>
+          <p>{{r.nutritional_info.fat_grammes_per_serve}} grammes of fat,</p>
+          <p>{{r.nutritional_info.fibre_grammes_per_serve}} grammes of fibre and </p>
+          <p>{{r.nutritional_info.carb_grammes_per_serve}} grammes of carbohydrate. </p>
       
+          <p>This recipe comes from the Caribbean island of {{r.recipe_island}}</p>
+          
+          <div>
+          <a href={{url_for('islands', recipe_island=r.recipe_island  )}}>More Information on this Island</a>
+      
+          <a href="{{url_for('delete_recipe', recipe_id=r._id)}}" class="waves-effect waves-light btn btn_small">Delete Recipe</a>
+          <a href="{{url_for('editrecipe', recipe_id=r._id)}}" class="waves-effect waves-light btn btn_small blue">Edit Recipe</a>
+          </div>
+   
     </div>
   </div>
   
 {% endfor %}
   
-
-
 {% endblock %}
