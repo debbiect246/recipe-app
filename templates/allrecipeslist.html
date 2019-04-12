@@ -1,4 +1,3 @@
-
 {% extends 'base.html' %}
 {% block content %} 
 
@@ -6,85 +5,37 @@
     <h1>Caribbean Recipes</h1>
 </div>
 
-    <ul class="collapsible" data-collapsible="accordion">
-        {% for r in recipes %}
-        <li>
-            <div class="collapsible-header">
-
-                <div class=" recipe_header col s9">
-                    <i class="material-icons">expand_more</i><strong>{{r.recipe_name}}</strong> - {{r.recipe_intro}}
-                    
-                    <span>This recipe is best eaten for : 
-                    {{r.recipe_type}}
-                </span>
-                </div>
-            </div>
-            
-            <div class="collapsible-body">
-                <span>
-                    <img src="{{r.recipe_picture}}" alt="{{r.recipe_name}}">
-                    <a href="{{url_for('delete_recipe', recipe_id=r._id)}}" class="waves-effect waves-light btn btn_small red">Delete Recipe</a>
-                    <a href="{{url_for('editrecipe', recipe_id=r._id)}}" class="waves-effect waves-light btn btn_small blue">Edit Recipe</a>
-                </span>
-            </div>
-            
-            
-            <div class="collapsible-body">
-                <span>Recipe ingredients:
-                    {{r.recipe_ingredients}}
-                </span>
-            </div>
-            <div class="collapsible-body">
-                <span>Follow these steps to make this dish: 
-                    {{r.method}}
-                </span>
-            </div>
-            
-            <div class="collapsible-body">
-                <span>This recipe comes from: 
-                    {{r.recipe_island}}
-                    <a href={{url_for('islands', recipe_island=r.recipe_island  )}}>More Information on this Island</a>
-                </span>
-                <span>  and can be found in   
-                    {{r.recipe_author}}
-                </span>
-            </div>
-            
-            <div class="collapsible-body">
-                <span>This recipe contains  
-                    {{r.recipe_contains}}
-                </span>
-                <span><strong>  and has these allergens:  * </strong>   
-                    {{r.allergens}}
-                </span>
-            </div>
-            
-            <div class="collapsible-body">
-                <span>This recipe makes: 
-                    {{r.nutritional_info.number_servings}} servings
-                </span>
-                <span> and each serving has:    
-                    {{r.nutritional_info.calories_per_serve}} calories.
-                </span>
-                <span>Each serving has:  
-                    {{r.nutritional_info.protein_grammes_per_serve}} grammes of protein, 
-                </span>
-                <span>     
-                    {{r.nutritional_info.fat_grammes_per_serve}} grammes of fat,
-                </span>
-                <span>     
-                    {{r.nutritional_info.fibre_grammes_per_serve}} grammes of fibre and 
-                </span>
-                <span>     
-                    {{r.nutritional_info.carb_grammes_per_serve}} grammes of carbohydrate. 
-                </span>
-                
-            </div>
-            
-            
-            
-        </li>
-        {% endfor %}
-    </ul> 
+{% for r in recipes %}
     
+    <div class="card" class="col s3">
+    
+        <div class="card-image waves-effect waves-block waves-light" >
+          <img class="activator" src="{{r.recipe_picture}}">
+        </div>
+    
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">{{r.recipe_name}}<i class="material-icons right">more_vert</i></span>
+      <p><a href="#">This recipe is best eaten for {{r.recipe_type}}</a></p>
+    </div>
+    
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i><strong>{{r.recipe_name}}</strong></span>
+      <p>Ingredients needed for this recipe.  {{r.recipe_ingredients}}</p>
+      <p>Here's how you make {{r.recipe_name}}.  {{r.method}}</p>
+      <p>This recipe makes {{r.nutritional_info.number_servings}} servings and each serving has:</p>
+      <p>{{r.nutritional_info.calories_per_serve}} calories.</p>
+      <p>{{r.nutritional_info.protein_grammes_per_serve}} grammes of protein,</p>
+      <p>{{r.nutritional_info.fat_grammes_per_serve}} grammes of fat,</p>
+      <p>{{r.nutritional_info.fibre_grammes_per_serve}} grammes of fibre and </p>
+      <p>{{r.nutritional_info.carb_grammes_per_serve}} grammes of carbohydrate. </p>
+      <p>This recipe comes from the Caribbean island of {{r.recipe_island}}</p>
+      <a href={{url_for('islands', recipe_island=r.recipe_island  )}}>More Information on this Island</a>
+      
+    </div>
+  </div>
+  
+{% endfor %}
+  
+
+
 {% endblock %}
