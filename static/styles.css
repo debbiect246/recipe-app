@@ -29,9 +29,9 @@
 
 body {
         height:100vh;
-        background-image: url("static/images/caribbean_background.jpg"); 
+        background-image: url("images/abstract.jpg"); 
     }
-    
+   
 
 img {
    width: 250px;
@@ -42,11 +42,11 @@ img {
    margin-right: auto;
    background:#f7c741;
    padding:12px;
-   border:1px solid #f3814d;
+   border:1px solid #000000;
   
 }
 
-img loginphoto{
+.loginphoto{
    display: block;
    margin-left: auto;
    margin-right: auto;
@@ -62,7 +62,7 @@ img loginphoto{
 
 /* styling main heading */
 h1{
-  color: orange;
+  color: black;
   text-align:center;
 }
 
