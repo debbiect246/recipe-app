@@ -51,7 +51,16 @@ img {
    margin-left: auto;
    margin-right: auto;
    height: 400px;
-   width: 500px;
+   width: 1000px;
+}
+
+.islandphoto{
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   height: 300px;
+   width: 600px;
+    
 }
 
 .recipecolumn{
