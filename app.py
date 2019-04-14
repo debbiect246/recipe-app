@@ -115,6 +115,18 @@ def findrecipe():
         
     return render_template("findrecipe.html")
 
+@app.route("/findrecipecontents", methods=['GET', 'POST'])   
+def findrecipecontents():
+    recipes=mongo.db.recipes
+    if request.method == 'POST':
+        requested_contents = request.form.get("recipe_contains")
+        print(requested_contents)
+        recipes = mongo.db.recipes.find({"recipe_contains": requested_contents})
+        return render_template("results.html", recipes=recipes)
+        
+    return render_template("findrecipe.html")    
+    
+
 #route for page to display results of searches
 		
 @app.route("/results")
