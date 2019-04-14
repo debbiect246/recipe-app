@@ -124,6 +124,17 @@ def findrecipecontents():
         recipes = mongo.db.recipes.find({"recipe_contains": requested_contents})
         return render_template("results.html", recipes=recipes)
         
+    return render_template("findrecipe.html")
+    
+@app.route("/findrecipeisland", methods=['GET', 'POST'])   
+def findrecipeisland():
+    recipes=mongo.db.recipes
+    if request.method == 'POST':
+        requested_island = request.form.get("recipe_island")
+        print(requested_island)
+        recipes = mongo.db.recipes.find({"recipe_island": requested_island})
+        return render_template("results.html", recipes=recipes)
+        
     return render_template("findrecipe.html")    
     
 

@@ -1,5 +1,8 @@
 {% extends 'base.html' %} {% block content %}
     <h1>Find Recipe</h1>
+    
+<!-- code to find Lunch, Dinner or Dessert recipe -->
+
 <div class="row">
     <h5> Choose to find Lunch, dinner or dessert recipes</h5>
 
@@ -20,6 +23,9 @@
                 <input id="recipe_type" name="recipe_type" type="text">
                 
             </div>
+            
+    <!-- code for submit button to find Lunch, Dinner or Dessert recipes-->
+    
    
     <div class="row">
             <button class="btn waves-effect waves-light" type="submit" name="action">Find Recipes
@@ -27,7 +33,9 @@
              </button>
     </div>
     </form>
-</div> 
+</div>
+
+<!--  code to find recipes which contain meat, fish, vegetables or sugar -->
 
 <div class="row">
     <h5> Choose to find recipe which contains meat,fish, vegetables or sugar</h5>
@@ -36,7 +44,7 @@
     <form action="{{ url_for('findrecipecontents')}}" method="POST"  class="col s6">
         <div class="row">
             <div class="input-field col s6">
-                <i class="material-icons prefix">access_time</i>
+                <i class="material-icons prefix">person</i>
                     
                     <select id="recipe_contains" name="recipe_contains">
                         <option value="" disabled selected>Choose main ingredient of recipe</option>
@@ -50,6 +58,8 @@
                 <input id="recipe_contains" name="recipe_contains" type="text">
                 
             </div>
+            
+    <!-- code for submit button to find meat, vegetable, fish or sugar main ingredient recipes-->
    
     <div class="row">
             <button class="btn waves-effect waves-light" type="submit" name="action">Find Recipes
@@ -58,6 +68,43 @@
     </div>
     </form>
 </div> 
+
+<!-- code for finding recipes which come from particular islands -->
+
+<div class="row">
+    <h5> Choose to find recipes which come from particular islands. </h5>
+
+
+    <form action="{{ url_for('findrecipeisland')}}" method="POST"  class="col s6">
+        <div class="row">
+            <div class="input-field col s6">
+                <i class="material-icons prefix">directions_boat</i>
+                    
+                    <select id="recipe_contains" name="recipe_contains">
+                        <option value="" disabled selected>Choose recipe island</option>
+                        <option value="Jamaica">Jamaica</option>
+                        <option value="Curaco">Curaco</option>
+                        <option value="Dominica">Dominica</option>
+                        <option value="Guadelope">Guadelope</option>
+                        <option value="Barbados">Barbados</option>
+                        <option value="Grenada">Grenada</option>
+                        <option value="French i">French Guiana</option>
+                        <option value="Guyana">Guyana</option>
+                    </select>
+                    
+                        <label>recipe_island</label> 
+                <input id="recipe_island" name="recipe_island" type="text">
+                
+            </div>
+   
+    <div class="row">
+            <button class="btn waves-effect waves-light" type="submit" name="action">Find island recipes
+                <i class="material-icons right">playlist_add</i>
+             </button>
+    </div>
+    </form>
+</div> 
+
 
     
 {% endblock %}
