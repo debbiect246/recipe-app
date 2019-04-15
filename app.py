@@ -103,6 +103,7 @@ def delete_recipe(recipe_id):
     return redirect(url_for('allrecipeslist'))
 
 #route for find recipe page - user can search for lunch, dinner, dessert recipes, allergens, recipes from specified islands. 
+#code for searching for lunch, dinner or dessert recipes
 
 @app.route("/findrecipe", methods=['GET', 'POST'])
 def findrecipe():
@@ -114,6 +115,8 @@ def findrecipe():
         return render_template("results.html", recipes=recipes)
         
     return render_template("findrecipe.html")
+    
+#code for searching for recipes which contain meat, vegetables, fish or sugar as the main ingredient.
 
 @app.route("/findrecipecontents", methods=['GET', 'POST'])   
 def findrecipecontents():
@@ -125,6 +128,8 @@ def findrecipecontents():
         return render_template("results.html", recipes=recipes)
         
     return render_template("findrecipe.html")
+    
+#code for searching for recipes which come from particular islands.
     
 @app.route("/findrecipeisland", methods=['GET', 'POST'])   
 def findrecipeisland():
