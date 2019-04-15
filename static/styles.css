@@ -25,6 +25,10 @@
   background-color: orange;
 }
 
+.bg-image{
+    background-image: url("images/kebabs.jpg"); 
+}
+
 
 
 body {
