@@ -26,13 +26,28 @@
 }
 
 .bg-image{
-    background-image: url("images/kebabs.jpg"); 
+    background-image: url("images/barbadosfish.jpg"); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.loginpage {
+    text-align: center;
+    margin:auto;
+    vertical-align: middle;
+}
+
+.formcenter {
+    text-align: center;
+    margin:auto;
 }
 
 
 
 body {
-        height:100vh;
+        /*height:100vh;*/
         background-image: url("images/abstract.jpg"); 
     }
    
