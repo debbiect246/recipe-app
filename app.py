@@ -18,7 +18,7 @@ mongo = PyMongo(app)
 #route for home page
 @app.route("/")
 def index():
-    """Main page"""
+   
     return render_template("index.html")
 
 
@@ -31,11 +31,11 @@ def login():
     
 @app.route("/<username>")
 def user(username):
-    """Display welcome message"""
+    
     return "<h1>Welcome {0}</h1>".format(username)
 """
 
-Home page with login form
+#Home page with login form
 
 @app.route('/')
 def index():
