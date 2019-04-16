@@ -190,15 +190,11 @@ def findrecipeisland():
 def displayresults():
     return render_template('results.html')	
     
-#route for eventual log out page
+#route for log out page
     
 @app.route('/log_out')
 def log_out():
-    if session:
-        session.clear()
-        return render_template("logout.html")
-    else:
-        return redirect(url_for("index"))
+    return render_template('login.html')
 
 # instructions to run app
  

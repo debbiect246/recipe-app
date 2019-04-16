@@ -26,19 +26,14 @@
 }
 
 .bg-image{
-    background-image: url("images/dinner.jpg"); 
+    background-image: url("images/barbadosfish.jpg"); 
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    opacity:1;
+    
     
 }
 
-.loginpage {
-    text-align: center;
-    margin:auto;
-    vertical-align: middle;
-}
 
 .formcenter {
     text-align: center;
