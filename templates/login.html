@@ -14,13 +14,14 @@
 </head>
 <body class="bg-image">
    
-    <h1 class="loginpage">Caribbean Recipes</h1></a>
-      <div class="row">
-    <form action='{{url_for("login")}}' method='POST' class="col s12 m6 formcenter">
+    <h1 class="loginpage">Caribbean Recipes</h1>
+    
+    <div class="container col s4 offset-s8"><span class="flow-text"></span>
+      <form action='{{url_for("login")}}' method='POST' class="col s12 m6 center-align">
       
       <div class="row">
         
-        <div class="input-field text-center font-color">
+        <div class="input-field col s6">
           <i class="material-icons prefix">account_circle</i>
           <input id="username" name='username' type="text" class="validate font-color" placeholder="username" required>
           
@@ -31,10 +32,11 @@
                    {% endfor %}
         </div>
       </div>
+    
      
         <div class="row">
           
-          <div class="input-field text-center font-color">
+          <div class="input-field col s6">
           <i class="material-icons prefix">vpn_key</i>
           <input id="password" name='password' type="password" class="validate font-color" placeholder="Password" required>
           
@@ -61,16 +63,17 @@
             <i class="material-icons right">exit_to_app</i>
             </button>
       </div>
+      
+    </div>
     
     
-    <a style="
-    text-decoration: none;
+    <a style="text-decoration: none;
     color: white;"class="font-color link-text" href="{{url_for('register')}}">Don't have an account? Register here</a>
     </form>
     
   
  
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 </html>

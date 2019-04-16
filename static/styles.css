@@ -26,10 +26,11 @@
 }
 
 .bg-image{
-    background-image: url("images/barbadosfish.jpg"); 
+    background-image: url("images/dinner.jpg"); 
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    opacity:1;
     
 }
 
@@ -43,6 +44,8 @@
     text-align: center;
     margin:auto;
 }
+
+
 
 
 
