@@ -4,32 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" />
-     <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />   
     <title>Caribbean Recipes</title>
 </head>
 <body class="bg-image">
     
-    <section class="container text-center position-of-content">
-      <a id='link-text'href="/" style="
-    text-decoration: none;
-    color: white;"><h1 class="font-color">Caribbean Recipes</h1></a>
-    <form action='{{url_for("register")}}' method='POST' class="col s12 text-center bg-form">
-      <h4 class="font-color">Register</h4>
-      <div class="row">
-        <div class="input-field text-center font-color">
-          <i class="material-icons prefix">account_circle</i>
-          <input id="username" name='username' type="text" class="validate font-color" placeholder="username" required>
-          
-          {% for message in messages %} 
-                     <h5 class="font3">
-                         {{ message }}                                                                
-                     </h5>
-                   {% endfor %}
-        </div>
-        </div>
+    <div class="container col s4 offset-s8"><span class="flow-text"></span>
+    
+      <a id='link-text'href="/" style="text-decoration: none;
+      color: white;"><h1 class="font-color">Caribbean Recipes</h1></a>
+          <form action='{{url_for("register")}}' method='POST' class="col s12 m6 center-align">
+            <h4 class="font-color">Register</h4>
+            
+            <div class="row">
+              <div class="input-field text-center font-color">
+                <i class="material-icons prefix">account_circle</i>
+                <input id="username" name='username' type="text" class="validate font-color" placeholder="username" required>
+                
+                          {% for message in messages %} 
+                             <h5 class="font3">
+                               {{ message }}                                                                
+                             </h5>
+                          {% endfor %}
+              </div>
+    </div>
         
       </div>
       <div class="row">
