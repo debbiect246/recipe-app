@@ -99,17 +99,23 @@ CSS stands for Cascading Style sheets which is a type of style language which se
 the user to style the webpage in a particular way, making the UX richer and more meaningful for the user.
 
 Bootstrap:
-
+Bootstrap is a popular framework for developing responsive websites.  It has built in classes which allow websites to be
+responsive when viewed on any device.
 
 Materializecss.com:
-
+Naterializecss.com is a modern responsive framework developed by google.  It has built in classes which allow websites to
+be responsive when viewed on any device.  It also has many components which enhance the appearance of a webpage, e.g. forms, icons,
+badges, buttons.  All these save the user time when desigining a website and enhance the UX.  It is also designed to speed up
+development time and is easy to use.  I used version 0.100.2 - the most stable version as advised by CI.
 
 Flask:
+Flask is a microframework written in python.  Flask is therefore the "glue" that holds an application together.  Different types 
+of file can co-exist in a flask application, with the base template holding the HTML base code for other templates.  In addition
+flask provides security throught the wekzeug add in and the jinja templating language can also be used for markup on web pages.  
 
-
-
-JQuery
-The project uses JQuery to simplify DOM manipulation.  
+JQuery:
+The project uses JQuery to simplify DOM manipulation.  Jquery is a javascript library that is used to provide interactivity
+on websites.  The $ sign signals to the browser that jquery is being used.
 
 Testing
 --------
