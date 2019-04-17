@@ -8,42 +8,71 @@ could be created with these wonderful ingredients.
 
 I thought that it would be a good idea to bring produce an app to store details of user' favourite recipes
 and it will also be a good place for users to search for other recipes.  Recipes can be categorised
-into breakfast, lunch and dinner recipes and users can rate each recipe for flavour, ease of preparation
-and 
-The app will also provide statistics on the number of times each recipe is used and show user ratings 
-for each user.
+into lunch and dinner recipes and users can search for recipes by type of recipe, recipe contents, island recipe comes from
+and recipes which do not contain allergens.
 
 
 UX
+--
 
 User stories
+------------
 1.	 Each user has a unique username chosen by them and can only add, review, delete and update their own recipes.
 2.	 User can choose a recipe from the database and see a summary view of it. 
-3.	User can choose from 4 main categories of recipes:  breakfast, lunch, dinner and deserts.
-4.	User can also choose from vegetarian, meat based, pescatarian in secondary recipe section and get summary list of each.
+3.   User can catsearch for different types of recipes:  lunch, dinner and deserts.
+4.	 User can also search for recipes which contain meat, fish, vegetables or fruit.
 5.	 User can add a recipe to the database.
-6.	 User can delete any of their recipes from the database.
-7.	 User can select a category of recipes to view and select a recipe to view from these.
-8.	 Each recipe has a recipe view page which shows a picture, recipe ingredients and method, number of servings, allergens, recipe author, country of origin of the recipe.
-9.	 User can get a list of each recipe include in each of breakfast, lunch, dinner and dessert recipes.
-10.	 User can see statistics on how often each recipe has been used in a given time period.
-11.	 User can see statistics on ratings for each recipe.
+6.	 User can  edit or delete any of their recipes from the database.
+7.	 Each recipe has a recipe view page which shows a picture, recipe ingredients and method, number of servings, allergens, recipe author, country of origin of the recipe.
+8.	 User can see statistics on the nutritional ratings for each recipe.
+9.	 User can see statistics on ratings for each recipe.
 
 Wireframes are shown in my UX folder.
 
 
 Features
-In this section, you should go over the different parts of your project, and describe each in a sentence or so.
-1.	 Each user has a unique username chosen by them and can only add, review, delete and update their own recipes.  Sill working on login facility.
-2.	 User can choose a recipe from the database and see a summary view of it. Done on allrecipes.html page
+--------
+The features I implemented successfully are shown below:
+
+1.	 Each user has a unique username chosen by them and can only add, delete and update their own recipes.  
+    Achieved through use of login page.  Users are stored in a collection in the database- they are authenticated against
+    this when they log in.  The author of the recipe is stored in the database and only the authenticated user can 
+    edit and delete their own recipes.  All users can see all recipes and add a recipe to the database.
+
+2.	 User can choose a recipe from the database and see a summary view of it. 
+	 Each recipe is displayed on a recipe card.
+     The recipe card shows a picture of the recipe, displays nutritional information about the recipe and  has a list of
+     allergens at the top of the card.  A user can click on the vertical link on the top right of each card to get a 
+     list of ingredients for each recipe and a list of steps for successfully making the recipe.
+    
 3.	User can choose from 3 main categories of recipes:  lunch, dinner and deserts.
-4.	User can also choose from vegetarian, meat based, pescatarian in secondary recipe section and get summary list of each.
-5.	 User can add a recipe to the database.  Done on addrecipe.html page.
-6.	 User can delete any of their recipes from the database.
-7.	 Each recipe has a recipe view which shows a picture, recipe ingredients and method, number of servings, allergens, recipe author, country of origin of the recipe.
+    Each user is able to do a search for lunch, dinner and dessert recipes.  The recipe card shown as a result of this search
+    will show a picture of the finished recipe together with nutritional and allergen information.  Clicking on the vertical link
+    on the top right of the card brings up the ingredients needed and instructions for making the recipe.
 
+4.	User can also choose from vegetarian, meat based, vegetable and fruit recipes.
+    Each user is able to do a search for meat based, fish based, vegetable based or fruit based recipes. The recipe card shown as
+    a result of this search will show a picture of the finished recipe together with nutritional and allergen information. 
+    Clicking on the vertical link  on the top right of the card brings up the ingredients needed and instructions for making 
+    the recipe.
 
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
+5.  User can also search for a recipe by island.
+    All users can search for recipes which come from a particular carribean island. There are 21 islands in the islands collection
+    of the database so there is quite a choice.  In addition if a user needs more information on a caribbean island they can 
+    click on the link at the bottom of the relevant recipe card and a brief summary of the island will appear, showing a picture
+    of the island, information on the island population, the geographical location of the island and the main languages spoken 
+    on the island.
+
+6.  Users can search for a recipe which does not contain specified allergens.
+    All users can search for recipes which do not contain allergens specified by the user, and there is also an option for
+    users to find recipes which do not contain any allergens.
+	
+7.	 User can add a recipe to the database. 
+    All registered users can add a recipe to the database.  If a user does not have an account they can create one at the
+    start of the app - once they have an account they are free to add recipes to the database.
+	 
+Additional features 
+-------------------
 
 In the future I can add statistical pages showing ratings for each recipe.
 
@@ -55,27 +84,48 @@ Bar charts showing the number of calories in each recipe.
 Another feature idea
 
 Technologies Used
-In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
+-----------------
+HTML: 
+HTML - hypertext markup language is used to create the structure of web pages.  It consists of tags which tell the browser
+how to set out text and images on the page.  Hypertext is the method by which you move around on the web, markups are the tags
+which set out the structure of the webpage, thus HTML is a language for web creation with its own structure and syntax.  The data 
+in the tags is read by the web browser enabling you to create any web page you like.  In this project my templates are all written
+in HTML.  There is a template for adding, deleting, editing and adding recipes as well as one for viewing information about
+each island.  The base template sets out the way in which
+the website should look and information from this is used in each of the other templates.
+
+CSS:
+CSS stands for Cascading Style sheets which is a type of style language which sets out how the webpage should be styled.  It allows
+the user to style the webpage in a particular way, making the UX richer and more meaningful for the user.
+
+Bootstrap:
+
+
+Materializecss.com:
+
+
+Flask:
+
+
 
 JQuery
-The project uses JQuery to simplify DOM manipulation.
-Testing
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
-
+The project uses JQuery to simplify DOM manipulation.  
 
 Testing
--------
+--------
+Testing was carried out by human beings.  The food Tech teacher at my school tested the app with her caribbean recipes and
+students were able to add their own recipes to the app.
+
 
 Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
 
 For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
 
-Contact form:
-Go to the "Contact Us" page
-Try to submit the empty form and verify that an error message about the required fields appears
-Try to submit the form with an invalid email address and verify that a relevant error message appears
-Try to submit the form with all inputs valid and verify that a success message appears.
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
+Add recipe page:
+Go to the "Add recipe" page
+Type in details of recipe.
+Check that recipe appears in databases and that a new card has been created for it with details entered.
+Note that user does not need to enter all recipe details as recipe can later be edited by user who created it.
 
 You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
 

@@ -26,23 +26,13 @@
 }
 
 .bg-image{
-    background-image: url("images/barbadosfish.jpg"); 
+    background-image: url("images/beefandcorn.jpg"); 
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     
     
 }
-
-
-.formcenter {
-    text-align: center;
-    margin:auto;
-}
-
-
-
-
 
 body {
         /*height:100vh;*/
