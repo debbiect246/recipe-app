@@ -14,26 +14,6 @@ app.config["MONGO_URI"] = dbconfig()
 
 mongo = PyMongo(app)
 
-"""
-#route for home page
-@app.route("/")
-def index():
-   
-    return render_template("index.html")
-
-
-#route for eventual log in page
-    
-@app.route("/", methods = ["POST"])
-def login():
-    session["username"]=request.form["username"]
-    return redirect(url_for("user",username=session["username"]))
-    
-@app.route("/<username>")
-def user(username):
-    
-    return "<h1>Welcome {0}</h1>".format(username)
-"""
 
 #Home page with login form
 
@@ -122,18 +102,17 @@ def update_recipe(recipe_id):
         'recipe_picture':request.form.get('recipe_picture'),
         'method':request.form.get('method'),
         'allergens':request.form.get('allergens'),
-        'recipe_author':request.form.get('recipe_author'),
+        'recipe_author':request.form.get('recipe_author'), 
         'recipe_contains':request.form.get('recipe_contains'),
-        'nutritional_info' : {
-        'number_servings':request.form.get('nutritional_info.number_servings'),
-        'calories_per_serve':request.form.get('nutritional_info.calories_per_serve'),
-        'protein_grammes_per_serve':request.form.get('nutritional_info.protein_grammes_per_serve'),
-        'fat_grammes_per_serve':request.form.get('nutritional_info.fat_grammes_per_serve'),
-        'fibre_grammes_per_serve':request.form.get('nutritional_info.fibre_grammes_per_serve'),
-        'carb_grammes_per_serve':request.form.get('nutritional_info.carb_grammes_per_serve'),
-        }
+        'number_servings':request.form.get('number_servings'),
+        'calories_per_serve':request.form.get('calories_per_serve'),
+        'protein_grammes_per_serve':request.form.get('protein_grammes_per_serve'),
+        'fat_grammes_per_serve':request.form.get('fat_grammes_per_serve'),
+        'fibre_grammes_per_serve':request.form.get('fibre_grammes_per_serve'),
+        'carb_grammes_per_serve':request.form.get('carb_grammes_per_serve'),
+        })
 
-    })
+   
     return redirect(url_for('allrecipeslist'))
  
 #route for delete recipe page - user access this from all recipes list page  
