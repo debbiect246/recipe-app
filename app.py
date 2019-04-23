@@ -122,7 +122,7 @@ def delete_recipe(recipe_id):
     mongo.db.recipes.remove({'_id': ObjectId(recipe_id)})
     return redirect(url_for('allrecipeslist'))
 
-#route for find recipe page - user can search for lunch, dinner, dessert recipes, allergens, recipes from specified islands. 
+#routes for find recipe page - user can search for lunch, dinner, dessert recipes, allergens, recipes from specified islands. 
 #code for searching for lunch, dinner or dessert recipes
 
 @app.route("/findrecipe", methods=['GET', 'POST'])
@@ -130,7 +130,7 @@ def findrecipe():
     recipes=mongo.db.recipes
     if request.method == 'POST':
         requested_type = request.form.get("recipe_type")
-        print(requested_type)
+        
         recipes = mongo.db.recipes.find({"recipe_type": requested_type})
         return render_template("results.html", recipes=recipes)
         
@@ -143,7 +143,7 @@ def findrecipecontents():
     recipes=mongo.db.recipes
     if request.method == 'POST':
         requested_contents = request.form.get("recipe_contains")
-        print(requested_contents)
+        
         recipes = mongo.db.recipes.find({"recipe_contains": requested_contents})
         return render_template("results.html", recipes=recipes)
         
@@ -156,11 +156,25 @@ def findrecipeisland():
     recipes=mongo.db.recipes
     if request.method == 'POST':
         requested_island = request.form.get("recipe_island")
-        print(requested_island)
+        
         recipes = mongo.db.recipes.find({"recipe_island": requested_island})
         return render_template("results.html", recipes=recipes)
         
-    return render_template("findrecipe.html")    
+    return render_template("findrecipe.html")  
+    
+#code for searching for recipes which do not contain specified allergens.
+
+@app.route("/findallergensfree", methods=['GET', 'POST'])   
+def findallergensfree():
+    recipes=mongo.db.recipes
+    if request.method == 'POST':
+        requested_allergen = request.form.get("allergens")
+        
+        recipes = mongo.db.recipes.find({"allergens": {"$ne: requested_allergen"}})
+        return render_template("results.html", recipes=recipes)
+        
+    return render_template("findrecipe.html")  
+
     
 
 #route for page to display results of searches
