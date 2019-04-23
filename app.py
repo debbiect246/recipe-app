@@ -55,7 +55,7 @@ def login():
     return render_template('login.html')
             
  
-#route to display all recipes in summary and expanded form with accordion dropdown
+#route to display all recipes in summary and expanded form with cards
 
 @app.route('/allrecipeslist')
 def allrecipeslist():

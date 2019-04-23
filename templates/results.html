@@ -6,29 +6,29 @@
 </div>
 
 {% for r in recipes %}
-  <div class="container">
     
     <div class="card">
       
-        <div class="row recipecolumn">
+        <div class="row">
     
           <div class="col s4">
             <img class="activator" src="{{r.recipe_picture}}" alt="recipe picture">
           </div>
+      
+      
     
           <div class="card-content col s8">
             <span class="card-title activator grey-text text-darken-4"><strong>{{r.recipe_name}}</strong><i class="material-icons right">more_vert</i></span>
             <p><a href="#">This recipe is best eaten for {{r.recipe_type}}</a></p>
-            <p>This recipe contains these allergens <strong>{{r.allergens}}</strong></p>
-             <p>This recipe makes {{r.number_servings}} servings and each serving has:</p>
-          <p>{{r.calories_per_serve}} calories.</p>
-          <p>{{r.protein_grammes_per_serve}} grammes of protein,</p>
-          <p>{{r.fat_grammes_per_serve}} grammes of fat,</p>
-          <p>{{r.fibre_grammes_per_serve}} grammes of fibre and </p>
-          <p>{{r.carb_grammes_per_serve}} grammes of carbohydrate. </p>
+            <p>This recipe contains these allergens <strong>{{r.allergens}}</strong></p
+            <p>This recipe makes {{r.number_servings}} servings and each serving has {{r.calories_per_serve}} calories.</p>
+            <p>{{r.protein_grammes_per_serve}} grammes of protein,</p>
+            <p>{{r.fat_grammes_per_serve}} grammes of fat,</p>
+            <p>{{r.fibre_grammes_per_serve}} grammes of fibre and </p>
+            <p>{{r.carb_grammes_per_serve}} grammes of carbohydrate. </p>
             
           </div>
-          
+         
         </div>
     
         <div class="card-reveal">
@@ -36,14 +36,14 @@
           
           <p class="col s6">Ingredients needed for this recipe.  {{r.recipe_ingredients}}</p>
           <p>Here's how you make {{r.recipe_name}}.  {{r.method}}</p>
-         
+          
       
           <p>This recipe comes from the Caribbean island of {{r.recipe_island}}</p>
           
           <div>
           <a href={{url_for('islands', recipe_island=r.recipe_island  )}}>More Information on this Island</a>
       
-          <a href="{{url_for('delete_recipe', recipe_id=r._id)}}" class="waves-effect waves-light btn btn_small">Delete Recipe</a>
+          <a href="{{url_for('delete_recipe', recipe_id=r._id)}}" class="waves-effect waves-light btn btn_small red">Delete Recipe</a>
           <a href="{{url_for('editrecipe', recipe_id=r._id)}}" class="waves-effect waves-light btn btn_small blue">Edit Recipe</a>
           </div>
    
