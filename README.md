@@ -85,8 +85,9 @@ Another feature idea
 
 Technologies Used
 -----------------
-HTML: 
-HTML - hypertext markup language is used to create the structure of web pages.  It consists of tags which tell the browser
+
+HTML 
+Hypertext markup language is used to create the structure of web pages.  It consists of tags which tell the browser
 how to set out text and images on the page.  Hypertext is the method by which you move around on the web, markups are the tags
 which set out the structure of the webpage, thus HTML is a language for web creation with its own structure and syntax.  The data 
 in the tags is read by the web browser enabling you to create any web page you like.  In this project my templates are all written
@@ -94,33 +95,79 @@ in HTML.  There is a template for adding, deleting, editing and adding recipes a
 each island.  The base template sets out the way in which
 the website should look and information from this is used in each of the other templates.
 
-CSS:
+CSS
 CSS stands for Cascading Style sheets which is a type of style language which sets out how the webpage should be styled.  It allows
 the user to style the webpage in a particular way, making the UX richer and more meaningful for the user.
 
-Bootstrap:
+Bootstrap
 Bootstrap is a popular framework for developing responsive websites.  It has built in classes which allow websites to be
 responsive when viewed on any device.
 
-Materializecss.com:
+Materializecss.com
 Naterializecss.com is a modern responsive framework developed by google.  It has built in classes which allow websites to
 be responsive when viewed on any device.  It also has many components which enhance the appearance of a webpage, e.g. forms, icons,
 badges, buttons.  All these save the user time when desigining a website and enhance the UX.  It is also designed to speed up
 development time and is easy to use.  I used version 0.100.2 - the most stable version as advised by CI.
 
-Flask:
+Flask
 Flask is a microframework written in python.  Flask is therefore the "glue" that holds an application together.  Different types 
 of file can co-exist in a flask application, with the base template holding the HTML base code for other templates.  In addition
 flask provides security throught the wekzeug add in and the jinja templating language can also be used for markup on web pages.  
 
-JQuery:
+JQuery
 The project uses JQuery to simplify DOM manipulation.  Jquery is a javascript library that is used to provide interactivity
 on websites.  The $ sign signals to the browser that jquery is being used.
+
+Python
+I used Python version 3.7 to run my app.  Python is a high level programming language used for apps in many frameworks such as 
+flask, pyramid and django.  Python supports many programming paradigms and is object orientated and has a comprehensive set of libraries.
+Python is managed by a non profit organsation the Python software foundation.
+
+Mongodb
+I used mongodb for my database.  Through pymongo (a module in python) I was able to connect my database to my flask app through the
+use of appropriate environment variables.  Mongodb is a document database that provides the user with the facility to create,
+read, update and delete documents in a database.  Mongodb documents are stored in  collections in json or bson format and this makes it easy to 
+work with in Python and other programming languages.
+
+Heroku (https://www.heroku.com/)
+Heroku is a cloud platform that allows a developer to build, deliver, scale and monitor apps.  Heroku makes the experience of
+deploying an app relatively straightforward.  
+
+Chrome Developer Tools
+I used chrome developer tools to work on my code.  Chrome dev tools are a set of tools designed to give the developer tools
+to amend code in a testing environment in order to enhance the UX and functionality experience. 
+
 
 Testing
 --------
 Testing was carried out by human beings.  The food Tech teacher at my school tested the app with her caribbean recipes and
-students were able to add their own recipes to the app.
+students were able to add and delete their own recipes to the app.
+
+Manual Testing
+Add Recipe Page:
+
+Go to the "Add Recipe" page.
+Try to submit the empty form and verify that the recipe will not submit without a RECIPE NAME.
+Try to submit the form without description and verify that the recipe will not submit without a RECIPE DESCRIPTION.
+Try to submit the form without Vegan selected and verify that an error message appears.
+My Recipes Page
+
+Go to the "My Recipes" page.
+Try to Delete a recipe and verify that an error message appears stating that if the user goes ahead the recipe will be permanently deleted.
+My Dashboard
+
+Once logged in, go to the Dashboard page.
+Verify that the "Recipe Count" box is displaying the correct number of recipes.
+Verify that the 3 graphs for "Base Ingredient", "Meal Type" & "Flavour" are displaying correctly.
+Ratings
+
+The Average Rating field does not update correctly
+Edit A Recipe
+
+when editing a recipe a new recipe will create instead of modifying the existing file.
+Responsive Testing
+The app was tested on Samsung S8, Apple iPhone 6, Apple iPad Air 2 and also using the Google Chrome inspect feature to test for repsonsiveness and any errors that occurred. The main issue which was found was the sidevar/ navbar not resizing.
+
 
 
 Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
@@ -138,19 +185,30 @@ You should also mention in this section any interesting bugs or problems you dis
 If this section grows too long, you may want to split it off into a separate file and link to it from here.
 
 Deployment
-This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
+----------
 
-In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
+The following section describes the process to deploy this project to Heroku.
 
-Different values for environment variables (Heroku Config Vars)?
-Different configuration files?
-Separate git branch?
-In addition, if it is not obvious, you should also describe how to run your code locally.
+Ensure all required technologies are installed locally, as per the requirements.txtfile.
+Via Linux Terminal, login to Heroku, using 'heroku login' command. Input Heroku login details.
+Create new Heroku app, using 'heroku apps:create appname' command.
+Push project to Heroku, using 'push -u heroku master' command.
+Create scale, using 'heroku ps:scale web=1' command.
+Login to Heroku and select newly created app.
+Select settings. Select ‘Reveal Config'. Add IP 0.0.0.0 and PORT 5000.
+From 'More' menu on the top right, select 'Restart all dynos'.
+View app: In settings, select Domain URL, NOT Git URL to view your hosted application.
+Deployed via Heroku: 
 
 Credits
+-------
 Content
-The text for section Y was copied from the Wikipedia article Z
+The text for the islands was copied from wikpaedia.
+
 Media
-The photos used in this site were obtained from ...
+The photos used in this site were obtained from pixabay and pixels.
+
 Acknowledgements
-I received inspiration for this project from X
+I received inspiration for this project from my mentor Simen Daehlin, fellow students especially Jo Wings,
+Miro, John Lynch and John L3.  Family, friends and my teaching colleagues and school students were also very helpful,
+
