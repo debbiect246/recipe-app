@@ -85,12 +85,14 @@ def insert_recipe():
 
 #route for edit recipe page
 
-@app.route("/editrecipe/<recipe_id>")
+@app.route("/editrecipe/<recipe_id>/<username>")
 def editrecipe(recipe_id):
+    the_user = mongo.db.register.find_one({"username": ObjectId("username")})
     the_recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
-    return render_template('editrecipe.html', recipe=the_recipe)
-
-@app.route('/update_recipe/<recipe_id>', methods=["POST"])
+    return render_template('editrecipe.html', recipe=the_recipe, username=the_user)
+    
+    
+@app.route('/update_recipe/<recipe_id> ', methods=["POST"])
 def update_recipe(recipe_id):
     recipes = mongo.db.recipes
     recipes.update( {'_id': ObjectId(recipe_id)},
@@ -169,7 +171,6 @@ def findallergensfree():
     recipes=mongo.db.recipes
     if request.method == 'POST':
         requested_allergen = request.form.get("allergens")
-        
         recipes = mongo.db.recipes.find({"allergens": {"$ne: requested_allergen"}})
         return render_template("results.html", recipes=recipes)
         
