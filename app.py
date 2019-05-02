@@ -86,10 +86,10 @@ def insert_recipe():
 #route for edit recipe page
 
 @app.route("/editrecipe/<recipe_id>/<username>")
-def editrecipe(recipe_id):
-    the_user = mongo.db.register.find_one({"username": ObjectId("username")})
+def editrecipe(recipe_id, username):
+    the_user = mongo.db.register.find_one({"username": username})
     the_recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
-    return render_template('editrecipe.html', recipe=the_recipe, username=the_user)
+    return render_template('editrecipe.html', recipe=the_recipe, register=the_user)
     
     
 @app.route('/update_recipe/<recipe_id> ', methods=["POST"])
