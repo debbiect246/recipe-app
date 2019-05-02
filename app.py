@@ -117,7 +117,7 @@ def update_recipe(recipe_id):
    
     return redirect(url_for('allrecipeslist'))
  
-#route for delete recipe page - user access this from all recipes list page  
+#route for delete recipe function - user access this from all recipes list page  
     
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):

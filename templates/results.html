@@ -44,7 +44,7 @@
           <a href={{url_for('islands', recipe_island=r.recipe_island  )}}>More Information on this Island</a>
       
           <a href="{{url_for('delete_recipe', recipe_id=r._id)}}" class="waves-effect waves-light btn btn_small red">Delete Recipe</a>
-          <a href="{{url_for('editrecipe', recipe_id=r._id)}}" class="waves-effect waves-light btn btn_small blue">Edit Recipe</a>
+          <a href="{{url_for('editrecipe', recipe_id=r._id, username=r.recipe_author)}}" class="waves-effect waves-light btn btn_small blue">Edit Recipe</a>
           </div>
    
     </div>
