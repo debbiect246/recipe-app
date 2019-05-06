@@ -119,10 +119,12 @@ def update_recipe(recipe_id):
  
 #route for delete recipe function - user access this from all recipes list page  
     
-@app.route("/delete_recipe/<recipe_id>")
-def delete_recipe(recipe_id):
+@app.route("/delete_recipe/<recipe_id>/<username>")
+def delete_recipe(recipe_id, username):
+    the_user = mongo.db.register.find_one({"username": username})
+    the_recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     mongo.db.recipes.remove({'_id': ObjectId(recipe_id)})
-    return redirect(url_for('allrecipeslist'))
+    return redirect(url_for('deleterecipe', recipe=the_recipe, register=the_user))
 
 #routes for find recipe page - user can search for lunch, dinner, dessert recipes, allergens, recipes from specified islands. 
 #code for searching for lunch, dinner or dessert recipes
