@@ -27,7 +27,9 @@ User stories
 8.	 User can see statistics on the nutritional ratings for each recipe.
 9.	 User can see statistics on ratings for each recipe.
 
-Wireframes are shown in my UX folder.
+Wireframes are shown below.
+
+
 
 
 Features
