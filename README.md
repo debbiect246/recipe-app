@@ -2,14 +2,15 @@ CARIBBEAN RECIPE APP
 ---------------------
 In this project, I designed a recipe app for users to add, update, or search for caribbean recipes.
 My late father was from the Caribbean island of Grenada and I was lucky enough to enjoy many family
-holidays on the island in my childhood and later on as an adult with my own family.  I loved the
-fresh fruit and vegetables which were cheap and plentiful, sometimes free!  I loved the recipes that 
+holidays on the island in my childhood and later on as an adult with my own children.  I loved the
+exotic fresh fruit and vegetables which were cheap and plentiful, sometimes free!  I loved the recipes that 
 could be created with these wonderful ingredients.
 
-I thought that it would be a good idea to bring produce an app to store details of user' favourite recipes
+I thought that it would be a good idea to bring produce an app to store details of user's favourite recipes
 and it will also be a good place for users to search for other recipes.  Recipes can be categorised
 into lunch and dinner recipes and users can search for recipes by type of recipe, recipe contents, island recipe comes from
-and recipes which do not contain allergens.
+and recipes which do not contain allergens.  The site also gives brief information on the island the recipe comes
+from maybe encouraging a user to consider a visit to one of these lovely islands.
 
 
 UX
@@ -17,15 +18,16 @@ UX
 
 User stories
 ------------
-1.	 Each user has a unique username chosen by them and can only add, review, delete and update their own recipes.
-2.	 User can choose a recipe from the database and see a summary view of it. 
+1.	 Each user has a unique username chosen by them and can only add and update their own recipes.
+2.	 User can see each recipe on a recipe card. 
 3.   User can catsearch for different types of recipes:  lunch, dinner and deserts.
 4.	 User can also search for recipes which contain meat, fish, vegetables or fruit.
-5.	 User can add a recipe to the database.
-6.	 User can  edit or delete any of their recipes from the database.
-7.	 Each recipe has a recipe view page which shows a picture, recipe ingredients and method, number of servings, allergens, recipe author, country of origin of the recipe.
-8.	 User can see statistics on the nutritional ratings for each recipe.
-9.	 User can see statistics on ratings for each recipe.
+5.	 User can search for recipes which contain meat, fish, vegetables or sugar.
+6.	 User can search for recipes which are free of a specified allergen.
+7.	 User can add a recipe to the database.
+8.	 User can  edit any of their recipes from the database.
+9.	 Each recipe has a recipe view page which shows a picture, recipe ingredients and method, number of servings, allergens, recipe author, country of origin of the recipe.
+
 
 Wireframes are shown below.
 
@@ -76,14 +78,27 @@ The features I implemented successfully are shown below:
 Additional features 
 -------------------
 
-In the future I can add statistical pages showing ratings for each recipe.
+In the future I can add statistical pages showing ratings for each recipe, so that a 
+user can see statistics on the nutritional ratings for each recipe and the ratings
+for ease of use for each recipe.
+
 
 Features Left to Implement
+--------------------------
 
+Autheticated user login.
 Statistics on ratings for each recipe.
 Bar charts showing the number of calories in each recipe.
 
 Another feature idea
+--------------------
+I would have liked to have added a delete button so that users can delete their 
+recipes and store them in an archive, having "archived recipes" in my navbar.  At 
+the moment I don't have the skills to do this but in the future when I have more time
+I could add a new collection to store a set of archived recipes and add a route so
+that a user could then add recipes to the archive.  This archive could then be searchable
+by date and type of recipe, etc.
+
 
 Technologies Used
 -----------------
@@ -165,35 +180,45 @@ Testing was carried out by human beings.  The food Tech teacher at my school tes
 students were able to add and delete their own recipes to the app.
 
 Manual Testing
-Add Recipe Page:
 
+Log in page:
+Ensure that only registered users can login.  If an unregistered user tries to log in they are directed to the 
+register page.
+
+All recipes list page:
+Click on All Recipes item in the menu and ensure that all recipes are shown.
+The name of the recipe, recommended type of recipe, recipe ingredients and allergens are shown on the front of 
+the card for each recipe.  Clicking on the three vertical dots on the right hand side of the card shows the steps
+involved in making the recipe.
+There is a link at the bottom of the reverse card which when clicked shows information about the recipe island
+together with a map of the caribbean.
+
+
+Add Recipe Page:
 Go to the "Add Recipe" page.
 Try to submit the empty form and verify that the recipe will not submit without a RECIPE NAME.
 Try to submit the form without description and verify that the recipe will not submit without a RECIPE DESCRIPTION.
 Try to submit the form without Vegan selected and verify that an error message appears.
 My Recipes Page
 
-Go to the "My Recipes" page.
-Try to Delete a recipe and verify that an error message appears stating that if the user goes ahead the recipe will be permanently deleted.
-My Dashboard
+Using the "Edit Recipe" button.
+Try to edit a recipe and verify that a user can only edit a recipe if they are the author of the recipe.
+Input fields are present for each recipe.  User can type into these or use drop down items to make selections.
+Once a recipe has been edited the allrecipes list page renders and users can see that the recipe has been edited.
 
-Once logged in, go to the Dashboard page.
-Verify that the "Recipe Count" box is displaying the correct number of recipes.
-Verify that the 3 graphs for "Base Ingredient", "Meal Type" & "Flavour" are displaying correctly.
-Ratings
+Find Recipe page
+Try to find a recipe by recipe type - lunch, dinner or dessert.
+Try to find a recipe by the main type of ingredient it contains - meat, fish, vegetables or sugar.
+Try to find a recipe which comes from a particular caribbean island.
+Try to find a recipe which does not contain a user specified allergen.
+For each of the searches above a results page should show recipes which match the user specified
+criteria.
 
-The Average Rating field does not update correctly
-Edit A Recipe
-
-when editing a recipe a new recipe will create instead of modifying the existing file.
-Responsive Testing
-The app was tested on Samsung S8, Apple iPhone 6, Apple iPad Air 2 and also using the Google Chrome inspect feature to test for repsonsiveness and any errors that occurred. The main issue which was found was the sidevar/ navbar not resizing.
-
-
-
-Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
-
-For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
+Add Recipe page
+try to add a recipe by clicking on add recipe item in menu.
+List of fields should appear and user can type recipe details into each field.
+Some fields have drop down menus so that user can select correct item to input into field thus
+eliminating the possibility of making mistakes when entering the recipe details in these fields.
 
 Add recipe page:
 Go to the "Add recipe" page
@@ -201,9 +226,13 @@ Type in details of recipe.
 Check that recipe appears in databases and that a new card has been created for it with details entered.
 Note that user does not need to enter all recipe details as recipe can later be edited by user who created it.
 
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
+The app was tested on Samsung S8, Apple iPhone 6, Apple iPad Air 2 and also using the Google Chrome inspect feature to test for repsonsiveness and any errors that occurred. The main issue which was found was the sidevar/ navbar not resizing.
 
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
+
+Interesting bugs or problems you discovered during testing
+----------------------------------------------------------
+
+
 
 Deployment
 ----------
@@ -231,5 +260,7 @@ The photos used in this site were obtained from pixabay and pixels.
 
 Acknowledgements
 I received inspiration for this project from my mentor Simen Daehlin, fellow students especially Jo Wings,
-Miro, John Lynch and John L3.  Family, friends and my teaching colleagues and school students were also very helpful,
+Miro, John Lynch and John Longatty.  Family, friends and my teaching colleagues and school students were also very helpful 
+in giving me feedback.  I used pymongo documentation to help me get my code correct.
+
 
