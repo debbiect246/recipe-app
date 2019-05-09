@@ -3,7 +3,7 @@
 {% block content %} 
 
 <div class="row">
-    <h1>Caribbean Island for this recipe is {{this_island.recipe_island}}</h1>
+    <h2>The Caribbean Island for this recipe is {{this_island.recipe_island}}</h2>
 </div>
 
 
@@ -13,9 +13,18 @@
      
     <div class="row">
          <p class="center">{{this_island.recipe_island}} has a population of {{this_island.island_population}} people</p>
-         <p class="center">{{this_island.recipe_island}} is located {{this_island.island_location}} and has an area of {{this_island.island_size}}</p>
-         <p class="center"> In {{this_island.recipe_island}} the main language spoken is {{this_island.island_languages}}</p>
-    </div>     
+         <p class="center">{{this_island.recipe_island}} is in the {{this_island.island_location}} and has an area of {{this_island.island_size}}</p>
+         <p class="center"> In {{this_island.recipe_island}} the main language(s) is/are {{this_island.island_languages}}</p>
+    </div>  
+    
+<div class="row">
+        <p class="center">The map below shows all of the caribbean area</p>
+        <img src="images/caribbeanmap.gif" alt="Caribbean map">
+</div>
+        
+    
+         
+    
     
      
 

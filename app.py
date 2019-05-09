@@ -117,14 +117,23 @@ def update_recipe(recipe_id):
    
     return redirect(url_for('allrecipeslist'))
  
-#route for delete recipe function - user access this from all recipes list page  
+#route for delete recipe function - user access this from all recipes list page 
+#if recipe author name is the same as username in register collection
+#user can delete recipe otherwise error message is shown
     
-@app.route("/delete_recipe/<recipe_id>/<username>")
+@app.route("/delete_recipe/<recipe_id>/<username>", methods=['GET','POST'])
 def delete_recipe(recipe_id, username):
-    the_user = mongo.db.register.find_one({"username": username})
-    the_recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
-    mongo.db.recipes.remove({'_id': ObjectId(recipe_id)})
-    return render_template('delete_recipe.html', recipe=the_recipe, register=the_user)
+    if request.method == 'POST':
+        the_user = mongo.db.register.find_one({"username": username})
+        print('the user',the_user)
+        the_recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+        the_author = mongo.db.recipes.find_one({"recipe_author": username})
+        print('author',the_author)
+        if the_user == the_author:
+            mongo.db.recipes.remove({'_id': ObjectId(recipe_id)})
+        else:
+            flash("Sorry you do not have permission to delete this recipe")
+    return redirect(url_for('allrecipeslist'))
     
 
 #routes for find recipe page - user can search for lunch, dinner, dessert recipes, allergens, recipes from specified islands. 

@@ -32,7 +32,7 @@
         </div>
     
         <div class="card-reveal col s4">
-          <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i><strong>{{r.recipe_name}}</strong></span>
+          <span class="card-title grey-text text-darken-4 col s4"><i class="material-icons right">close</i><strong>{{r.recipe_name}}</strong></span>
           
           <p class="col s6">Ingredients needed for this recipe.  {{r.recipe_ingredients}}</p>
           <p>Here's how you make {{r.recipe_name}}.  {{r.method}}</p>
@@ -43,7 +43,7 @@
           <div>
           <a href={{url_for('islands', recipe_island=r.recipe_island  )}}>More Information on this Island</a>
       
-          <a href="{{url_for('delete_recipe', recipe_id=r._id, username=r.recipe_author)}}" class="waves-effect waves-light btn btn_small red">Delete Recipe</a>
+          
           <a href="{{url_for('editrecipe', recipe_id=r._id, username=r.recipe_author)}}" class="waves-effect waves-light btn btn_small blue">Edit Recipe</a>
           </div>
    
