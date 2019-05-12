@@ -30,7 +30,7 @@
                         <option value="meat">meat</option>
                         <option value="fish">fish</option>
                         <option value="dairy">dairy</option>
-                        <option value="fruit">fruit</option>
+                        <option value="sugar">sugar</option>
                         
                      </select>
                     
@@ -65,6 +65,27 @@
         <div class="row">
             <div class="input-field col s3">
                 <i class="material-icons prefix">directions_boat</i>
+                
+                    <select id="recipe_island" name="recipe_island">
+                        <option value="" disabled selected>Choose recipe island</option>
+                        <option value="Jamaica">Jamaica</option>
+                        <option value="Curaco">Curaco</option>
+                        <option value="Dominica">Dominica</option>
+                        <option value="Guadelope">Guadelope</option>
+                        <option value="Grenada">Grenada</option>
+                        <option value="Guyana">Guyana</option>
+                        <option value="French Guiana">French Guiana</option>
+                        <option value="Martinique">Martinique</option>
+                        <option value="St Lucia">St Lucia</option>
+                        <option value="Barbados">Barbados</option>
+                        <option value="Haiti">Haiti</option>
+                        <option value="US Virgin Isles">US Virgin Isles</option>
+                        <option value="Monserrat">Monserrat</option>
+                        <option value="St Kitts and Nevis">St Kitts and Nevis</option>
+                        <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+                        <option value="Suriname">Suriname</option>
+                     </select>
+                    
                 <textarea name="recipe_island" id="recipe_island" class="materialize-textarea">{{recipe.recipe_island}}</textarea>
                 <label for="recipe_island">Recipe island</label>
             </div>
@@ -100,20 +121,27 @@
             <div class="input-field col s3">
                 <i class="material-icons prefix">short_text</i>
                 <textarea name="number_servings" id="number_servings" class="materialize-textarea">{{recipe.number_servings}}</textarea>
-                <label for="">Number of servings</label>
+                <label for="number_servings">Number of servings</label>
             </div>
             
             <div class="input-field col s3">
                 <i class="material-icons prefix">short_text</i>
                 <textarea name="calories_per_serve" id="calories_per_serve" class="materialize-textarea">{{recipe.calories_per_serve}}</textarea>
-                <label for="">Calories per serving</label>
+                <label for="calories_per_serve">Calories per serving</label>
             </div>
             
             <div class="input-field col s3">
                 <i class="material-icons prefix">short_text</i>
                 <textarea name="protein_grammes_per_serve" id="protein_grammes_per_serve" class="materialize-textarea">{{recipe.protein_grammes_per_serve}}</textarea>
-                <label for="">Protein grammes per serving</label>
+                <label for="protein_grammes_per_serve">Protein grammes per serving</label>
             </div>
+            
+            <div class="input-field col s3">
+                <i class="material-icons prefix">short_text</i>
+                <textarea name="fibre_grammes_per_serve" id="fibre_grammes_per_serve" class="materialize-textarea">{{recipe.fibre_grammes_per_serve}}</textarea>
+                <label for="fibre_grammes_per_serve">Fibre grammes per serving</label>
+            </div>
+            
             
         </div>
         
@@ -129,7 +157,7 @@
                         <option value="Dessert">Dessert</option>
                     </select>
                     
-                        <label>recipe_type</label> 
+                        <label for="recipe_type">recipe type{{recipe.recipe_type}}</label>
                     
                 </div>
                     <div class="input-field col s3">
