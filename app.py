@@ -106,7 +106,7 @@ def update_recipe(recipe_id):
         'recipe_island':request.form.get('recipe_island'),
         'recipe_author':request.form.get('recipe_author'),
         'recipe_contains':request.form.get('recipe_contains'),
-        'recipe_picture':request.form.get('recipe_picture'),
+        
         'number_servings':request.form.get('number_servings'),
         'calories_per_serve':request.form.get('calories_per_serve'),
         'protein_grammes_per_serve':request.form.get('protein_grammes_per_serve'),
