@@ -33,8 +33,9 @@
                         <option value="sugar">sugar</option>
                         
                      </select>
-                    
-                        <label>recipe_contains</label> 
+                 <textarea name="recipe_contains" id="recipe_contains" class="materialize-textarea">{{recipe.recipe_contains}}</textarea>
+                <label for="recipe_contains">Recipe main ingredient</label>     
+                        
                 
                 
             </div>
@@ -102,18 +103,19 @@
             <div class="input-field col s3">
                 <i class="material-icons prefix">warning</i>
                 
-                <select id="allergens" name="allergens">
-                    <option value="" disabled selected>Choose allergen</option>
-                    <option value="milk">Milk</option>
-                    <option value="eggs">Eggs</option>
-                    <option value="nuts">Nuts</option>
-                    <option value="soy">Soy</option>
-                    <option value="fish">Fish</option>
-                    <option value="shellfish">Shellfish</option>
-                    <option value="wheat">Wheat</option>
-                    <option value="none">None</option>
-                </select>
+                    <select id="allergens" name="allergens">
+                        <option value="" disabled selected>Choose allergen</option>
+                        <option value="milk">Milk</option>
+                        <option value="eggs">Eggs</option>
+                        <option value="nuts">Nuts</option>
+                        <option value="soy">Soy</option>
+                        <option value="fish">Fish</option>
+                        <option value="shellfish">Shellfish</option>
+                        <option value="wheat">Wheat</option>
+                        <option value="none">None</option>
+                    </select>
                 
+                 <textarea name="allergens" id="allergens" class="materialize-textarea">{{recipe.allergens}}</textarea>
                 <label for="allergens">Allergens</label>
             </div>
         
@@ -150,14 +152,15 @@
                 <div class="input-field col s3">
                     <i class="material-icons prefix">access_time</i>
                     
-                    <select id="recipe_type" name="recipe_type">
-                        <option value="" disabled selected>Choose recipe type</option>
-                        <option value="Lunch">Lunch</option>
-                        <option value="Dinner">Dinner</option>
-                        <option value="Dessert">Dessert</option>
-                    </select>
+                        <select id="recipe_type" name="recipe_type">
+                            <option value="" disabled selected>Choose recipe type</option>
+                            <option value="Lunch">Lunch</option>
+                            <option value="Dinner">Dinner</option>
+                            <option value="Dessert">Dessert</option>
+                        </select>
                     
-                        <label for="recipe_type">recipe type{{recipe.recipe_type}}</label>
+                     <textarea name="recipe_type" id="recipe_type" class="materialize-textarea">{{recipe.recipe_type}}</textarea>
+                     <label for="recipe_type">Recipe type</label>
                     
                 </div>
                     <div class="input-field col s3">
