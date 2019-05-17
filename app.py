@@ -3,7 +3,7 @@ from datetime import datetime
 from flask import Flask, redirect, render_template, request, session, url_for, flash
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId 
-from config import dbconfig
+
 from werkzeug.security import generate_password_hash, check_password_hash
 
 app = Flask(__name__)
@@ -11,6 +11,7 @@ app.secret_key = "randomstring123"
 app.config['DEBUG'] = False
 
 if app.config['DEBUG'] == True:
+    from config import dbconfig
     app.config["MONGO_DBNAME"] = 'recipe_manager'
     app.config["MONGO_URI"] = dbconfig()
 else:
