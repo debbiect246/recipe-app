@@ -8,9 +8,13 @@ from werkzeug.security import generate_password_hash, check_password_hash
 
 app = Flask(__name__)
 app.secret_key = "randomstring123"
+app.config['DEBUG'] = False
 
-app.config["MONGO_DBNAME"] = 'recipe_manager'
-app.config["MONGO_URI"] = dbconfig()
+if app.config['DEBUG'] == True:
+    app.config["MONGO_DBNAME"] = 'recipe_manager'
+    app.config["MONGO_URI"] = dbconfig()
+else:
+    app.config['MONGO_URI'] = os.getenv('MONGO_URI')
 
 mongo = PyMongo(app)
 
@@ -189,5 +193,4 @@ def log_out():
  
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
-            port=int(os.environ.get('PORT')),
-            debug=False)
+            port=int(os.environ.get('PORT')))
