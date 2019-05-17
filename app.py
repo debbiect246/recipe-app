@@ -16,6 +16,7 @@ if app.config['DEBUG'] == True:
     app.config["MONGO_URI"] = dbconfig()
 else:
     app.config['MONGO_URI'] = os.getenv('MONGO_URI')
+    app.config['MONGO_DBNAME'] = os.getenv('MONGO_DBNAME')
 
 mongo = PyMongo(app)
 
