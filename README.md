@@ -1,4 +1,4 @@
-CARIBBEAN RECIPE APP
+# CARIBBEAN RECIPE APP
 ---------------------
 In this project, I designed a recipe app for users to add, update, or search for caribbean recipes.
 My late father was from the Caribbean island of Grenada and I was lucky enough to enjoy many family
@@ -14,11 +14,11 @@ from maybe encouraging a user to consider a visit to one of these lovely islands
 
 The app was deployed to heroku and can be accessed by clicking on this link  https://recipe-app-flask-mongo.herokuapp.com/
 
-UX
+## UX
 --
 
-User stories
-------------
+### User stories
+
 1.	 Each user has a unique username chosen by them and can only add and update their own recipes.
 2.	 User can see each recipe on a recipe card. 
 3.   User can catsearch for different types of recipes:  lunch, dinner and deserts.
@@ -30,12 +30,17 @@ User stories
 9.	 Each recipe has a recipe view page which shows a picture, recipe ingredients and method, number of servings, allergens, recipe author, country of origin of the recipe.
 
 
-Wireframes are shown below.
+## Wireframes
+
+Wireframes were an integral part of the development process.  I designed these at the start of the project but as time went by they needed
+several revisions.  The final versions of my wireframes are shown below.
 
 
 
 
-Features
+
+
+## Features
 --------
 The features I implemented successfully are shown below:
 
@@ -75,8 +80,9 @@ The features I implemented successfully are shown below:
 7.	 User can add a recipe to the database. 
     All registered users can add a recipe to the database.  If a user does not have an account they can create one at the
     start of the app - once they have an account they are free to add recipes to the database.
+
 	 
-Additional features 
+## Additional features 
 -------------------
 
 In the future I can add statistical pages showing ratings for each recipe, so that a 
@@ -84,17 +90,17 @@ user can see statistics on the nutritional ratings for each recipe and the ratin
 for ease of use for each recipe.
 
 
-Features Left to Implement
---------------------------
+## Features Left to Implement
 
-1. Autheticated user login.
+
+1. Authenticated user login.  Users identities could be che
 
 2.  Statistics on ratings for each recipe.
 
 3.  Bar charts showing the number of calories in each recipe.
 
-Another feature idea
---------------------
+## Another feature idea
+
 I would have liked to have added a delete button so that users can delete their 
 recipes and store them in an archive, having "archived recipes" in my navbar.  At 
 the moment I don't have the skills to do this but in the future when I have more time
@@ -103,10 +109,10 @@ that a user could then add recipes to the archive.  This archive could then be s
 by date and type of recipe, etc.
 
 
-Technologies Used
------------------
+## Technologies Used
+--------------------
 
-HTML 
+* HTML 
 
 (https://developer.mozilla.org/en-US/docs/Learn/HTML)
 Hypertext markup language is used to create the structure of web pages.  It consists of tags which tell the browser
@@ -117,14 +123,14 @@ in HTML.  There is a template for adding, deleting, editing and adding recipes a
 each island.  The base template sets out the way in which
 the website should look and information from this is used in each of the other templates.
 
-CSS
+* CSS
 
 (https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS)
 CSS stands for Cascading Style sheets which is a type of style language which sets out how the webpage should be styled.  It allows
 the user to style the webpage in a particular way, making the UX richer and more meaningful for the user.
 
 
-Materializecss.com
+* Materializecss
 
 (https://materializecss.com/)
 Naterializecss.com is a modern responsive framework developed by google.  It has built in classes which allow websites to
@@ -132,21 +138,21 @@ be responsive when viewed on any device.  It also has many components which enha
 badges, buttons.  All these save the user time when desigining a website and enhance the UX.  It is also designed to speed up
 development time and is easy to use.  I used version 0.100.2 - the most stable version as advised by CI.
 
-Flask
+* Flask
 
 (flask.pocoo.org/)
 Flask is a microframework written in python.  Flask is therefore the "glue" that holds an application together.  Different types 
 of file can co-exist in a flask application, with the base template holding the HTML base code for other templates.  In addition
 flask provides security throught the wekzeug add in and the jinja templating language can also be used for markup on web pages.  
 
-JQuery
+* JQuery
 
 (https://jquery.com/)
 
 The project uses JQuery to simplify DOM manipulation.  Jquery is a javascript library that is used to provide interactivity
 on websites.  The $ sign signals to the browser that jquery is being used.
 
-Python
+* Python
 
 (https://www.python.org/)
 I used Python version 3.7 to run my app.  Python is a high level programming language used for apps in many frameworks such as 
@@ -161,7 +167,7 @@ use of appropriate environment variables.  Mongodb is a document database that p
 read, update and delete documents in a database.  Mongodb documents are stored in  collections in json or bson format and this makes it easy to 
 work with in Python and other programming languages.
 
-Heroku 
+* Heroku 
 
 (https://www.heroku.com/)
 Heroku is a cloud platform that allows a developer to build, deliver, scale and monitor apps.  Heroku makes the experience of
@@ -172,18 +178,20 @@ I used chrome developer tools to work on my code.  Chrome dev tools are a set of
 to amend code in a testing environment in order to enhance the UX and functionality experience. 
 
 
-Testing
---------
+## Testing
+----------
 Testing was carried out by human beings.  The food Tech teacher at my school tested the app with her caribbean recipes and
 students were able to add and delete their own recipes to the app.
 
-Manual Testing
+### Manual Testing
 
-Log in page:
-Ensure that only registered users can login.  If an unregistered user tries to log in they are directed to the 
+* Log in page:
+
+  Ensure that only registered users can login.  If an unregistered user tries to log in they are directed to the 
 register page.
 
-All recipes list page:
+* All recipes list page:
+
 Click on All Recipes item in the menu and ensure that all recipes are shown.
 The name of the recipe, recommended type of recipe, recipe ingredients and allergens are shown on the front of 
 the card for each recipe.  Clicking on the three vertical dots on the right hand side of the card shows the steps
@@ -192,19 +200,22 @@ There is a link at the bottom of the reverse card which when clicked shows infor
 together with a map of the caribbean.
 
 
-Add Recipe Page:
+* Add Recipe Page:
+
 Go to the "Add Recipe" page.
 Try to submit the empty form and verify that the recipe will not submit without a RECIPE NAME.
 Try to submit the form without description and verify that the recipe will not submit without a RECIPE DESCRIPTION.
 Try to submit the form without Vegan selected and verify that an error message appears.
 My Recipes Page
 
-Using the "Edit Recipe" button.
+* Using the "Edit Recipe" button.
+
 Try to edit a recipe and verify that a user can only edit a recipe if they are the author of the recipe.
 Input fields are present for each recipe.  User can type into these or use drop down items to make selections.
 Once a recipe has been edited the allrecipes list page renders and users can see that the recipe has been edited.
 
-Find Recipe page
+* Find Recipe page
+
 Try to find a recipe by recipe type - lunch, dinner or dessert.
 Try to find a recipe by the main type of ingredient it contains - meat, fish, vegetables or sugar.
 Try to find a recipe which comes from a particular caribbean island.
@@ -212,13 +223,15 @@ Try to find a recipe which does not contain a user specified allergen.
 For each of the searches above a results page should show recipes which match the user specified
 criteria.
 
-Add Recipe page
-try to add a recipe by clicking on add recipe item in menu.
+* Add Recipe page
+
+Try to add a recipe by clicking on add recipe item in menu.
 List of fields should appear and user can type recipe details into each field.
 Some fields have drop down menus so that user can select correct item to input into field thus
 eliminating the possibility of making mistakes when entering the recipe details in these fields.
 
-Add recipe page:
+* Add recipe page:
+
 Go to the "Add recipe" page
 Type in details of recipe.
 Check that recipe appears in databases and that a new card has been created for it with details entered.
@@ -227,29 +240,50 @@ Note that user does not need to enter all recipe details as recipe can later be 
 The app was tested on Samsung S8, Apple iPhone 6, Apple iPad Air 2 and also using the Google Chrome inspect feature to test for repsonsiveness and any errors that occurred. The main issue which was found was the sidevar/ navbar not resizing.
 
 
-Interesting bugs or problems you discovered during testing
-----------------------------------------------------------
+## Interesting bugs or problems I discovered during testing
+--------------------------------------------------------
+
+The most annoying bug I came across was when I was trying to push my code to heroku.  I followed
+the instructions above but got an error 500 after each attempt.  Despite looking at my code in detail I couldnt find
+anything wrong with it.  My mentor looked at my code later and pointed out that the number in the uri was incoffect so 
+when pushing to Heroku I got an authentication error.  Once I put in the corect number in my uri (which I cout from mlab), 
+I was able to successfully push my code to heroku.
+
+
+## Development process of my project
+---------------------------------
+
+* I created a new workspace in my cloud9 account and chose a blank template.
+* I then imported flask using the terminal.  'sudo pip3 install flask'.
+* I created a static folder for my images and my styles.css files and a templates folder for my templates.
+* Next thing was to set up my base template html file and my app.py file. 
+* In my base html file I started with html boiler plate then added in the following command '{% block content %} {% endblock %}' so 
+  that my nav bar would appear on each page.  I created my nav bar using an ordered list.  Effects for the nav bar were put into my
+  styles.css file.
+* In my app.py file I imported all the modules I would need and then set up a secret key and set my debug to True so that I could get
+  an error log if there was something wrong with my code I could sort it out with the help of the error log.  I also set up my secret 
+  key as part of my cookie encryption.
 
 
 
-Deployment
-----------
+## Deployment
+-------------
 
 The following section describes the process to deploy this project to Heroku.
 
-Ensure all required technologies are installed locally, as per the requirements.txtfile.
-Via Linux Terminal, login to Heroku, using 'heroku login' command. Input Heroku login details.
-Create new Heroku app, using 'heroku apps:create appname' command.
-Push project to Heroku, using 'push -u heroku master' command.
-Create scale, using 'heroku ps:scale web=1' command.
-Login to Heroku and select newly created app.
-Select settings. Select ‘Reveal Config'. Add IP 0.0.0.0 and PORT 5000.
-From 'More' menu on the top right, select 'Restart all dynos'.
-View app: In settings, select Domain URL, NOT Git URL to view your hosted application.
-Deployed via Heroku: 
+* Ensure all required technologies are installed locally, as per the requirements.txtfile.
+* Via Linux Terminal, login to Heroku, using 'heroku login' command. Input Heroku login details.
+* Create new Heroku app, using 'heroku apps:create appname' command.
+* Push project to Heroku, using 'push -u heroku master' command.
+* Create scale, using 'heroku ps:scale web=1' command.
+* Login to Heroku and select newly created app.
+* Select settings. Select ‘Reveal Config'. Add IP 0.0.0.0 and PORT 5000.
+* From 'More' menu on the top right, select 'Restart all dynos'.
+* View app: In settings, select Domain URL, NOT Git URL to view your hosted application.
+* App was now deployed via Heroku
 
-Credits
--------
+## Credits
+----------
 Content
 The text for the islands was copied from wikpaedia.
 
