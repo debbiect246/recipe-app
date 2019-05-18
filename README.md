@@ -12,6 +12,7 @@ into lunch and dinner recipes and users can search for recipes by type of recipe
 and recipes which do not contain allergens.  The site also gives brief information on the island the recipe comes
 from maybe encouraging a user to consider a visit to one of these lovely islands.
 
+The app was deployed to heroku and can be accessed by clicking on this link  https://recipe-app-flask-mongo.herokuapp.com/
 
 UX
 --
@@ -86,9 +87,11 @@ for ease of use for each recipe.
 Features Left to Implement
 --------------------------
 
-Autheticated user login.
-Statistics on ratings for each recipe.
-Bar charts showing the number of calories in each recipe.
+1. Autheticated user login.
+
+2.  Statistics on ratings for each recipe.
+
+3.  Bar charts showing the number of calories in each recipe.
 
 Another feature idea
 --------------------
@@ -120,11 +123,6 @@ CSS
 CSS stands for Cascading Style sheets which is a type of style language which sets out how the webpage should be styled.  It allows
 the user to style the webpage in a particular way, making the UX richer and more meaningful for the user.
 
-Bootstrap
-
-(https://getbootstrap.com/)
-Bootstrap is a popular framework for developing responsive websites.  It has built in classes which allow websites to be
-responsive when viewed on any device.
 
 Materializecss.com
 
