@@ -35,12 +35,7 @@ https://recipe-app-flask-mongo.herokuapp.com/
 ## Wireframes
 
 Wireframes were an integral part of the development process.  I designed these at the start of the project but as time went by they needed
-several revisions.  The final versions of my wireframes are shown below.
-
-
-
-
-
+several revisions.  Click on the link [wireframe](recipe-app/UX/wireframe for caribbean recipe) to see the final versions of my wireframes are shown below.
 
 
 ## Features
@@ -135,36 +130,36 @@ the user to style the webpage in a particular way, making the UX richer and more
 
 * Materializecss
 
-(https://materializecss.com/)
-Naterializecss.com is a modern responsive framework developed by google.  It has built in classes which allow websites to
+[Materialisecss](https://materializecss.com/)
+Naterializecss is a modern responsive framework developed by google.  It has built in classes which allow websites to
 be responsive when viewed on any device.  It also has many components which enhance the appearance of a webpage, e.g. forms, icons,
 badges, buttons.  All these save the user time when desigining a website and enhance the UX.  It is also designed to speed up
 development time and is easy to use.  I used version 0.100.2 - the most stable version as advised by CI.
 
 * Flask
 
-(flask.pocoo.org/)
+[Flask](flask.pocoo.org/)
 Flask is a microframework written in python.  Flask is therefore the "glue" that holds an application together.  Different types 
 of file can co-exist in a flask application, with the base template holding the HTML base code for other templates.  In addition
 flask provides security throught the wekzeug add in and the jinja templating language can also be used for markup on web pages.  
 
 * JQuery
 
-(https://jquery.com/)
+[jquery](https://jquery.com/)
 
 The project uses JQuery to simplify DOM manipulation.  Jquery is a javascript library that is used to provide interactivity
 on websites.  The $ sign signals to the browser that jquery is being used.
 
 * Python
 
-(https://www.python.org/)
+[python](https://www.python.org/)
 I used Python version 3.7 to run my app.  Python is a high level programming language used for apps in many frameworks such as 
 flask, pyramid and django.  Python supports many programming paradigms and is object orientated and has a comprehensive set of libraries.
 Python is managed by a non profit organsation the Python software foundation.
 
 Mongodb
 
-(https://mlab.com/)
+[mongodb](https://mlab.com/)
 I used mongodb for my database.  Through pymongo (a module in python) I was able to connect my database to my flask app through the
 use of appropriate environment variables.  Mongodb is a document database that provides the user with the facility to create,
 read, update and delete documents in a database.  Mongodb documents are stored in  collections in json or bson format and this makes it easy to 
@@ -172,11 +167,11 @@ work with in Python and other programming languages.
 
 * Heroku 
 
-(https://www.heroku.com/)
+[heroku](https://www.heroku.com/)
 Heroku is a cloud platform that allows a developer to build, deliver, scale and monitor apps.  Heroku makes the experience of
 deploying an app relatively straightforward.  
 
-Chrome Developer Tools
+* Chrome Developer Tools
 I used chrome developer tools to work on my code.  Chrome dev tools are a set of tools designed to give the developer tools
 to amend code in a testing environment in order to enhance the UX and functionality experience. 
 
