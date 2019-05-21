@@ -35,7 +35,7 @@ https://recipe-app-flask-mongo.herokuapp.com/
 ## Wireframes
 
 Wireframes were an integral part of the development process.  I designed these at the start of the project but as time went by they needed
-several revisions.  Click on the link [wireframe](/recipe-app/UX/wireframe for caribbean recipe app.pdf) to see the final versions of my wireframes are shown below.
+several revisions.  Click on the link [wireframe](/recipe-app/UX/wireframe.pdf) to see the final versions of my wireframes are shown below.
 
 
 ## Features
