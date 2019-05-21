@@ -1,5 +1,5 @@
 # CARIBBEAN RECIPE APP
----------------------
+
 In this project, I designed a recipe app for users to add, update, or search for caribbean recipes.
 My late father was from the Caribbean island of Grenada and I was lucky enough to enjoy many family
 holidays on the island in my childhood and later on as an adult with my own children.  I loved the
@@ -12,10 +12,12 @@ into lunch and dinner recipes and users can search for recipes by type of recipe
 and recipes which do not contain allergens.  The site also gives brief information on the island the recipe comes
 from maybe encouraging a user to consider a visit to one of these lovely islands.
 
-The app was deployed to heroku and can be accessed by clicking on this link  https://recipe-app-flask-mongo.herokuapp.com/
+The app was deployed to heroku and can be accessed by clicking on this link 
+
+https://recipe-app-flask-mongo.herokuapp.com/
 
 ## UX
---
+
 
 ### User stories
 
@@ -40,8 +42,9 @@ several revisions.  The final versions of my wireframes are shown below.
 
 
 
+
 ## Features
---------
+
 The features I implemented successfully are shown below:
 
 1.	 Each user has a unique username chosen by them and can only add, delete and update their own recipes.  
@@ -83,7 +86,7 @@ The features I implemented successfully are shown below:
 
 	 
 ## Additional features 
--------------------
+
 
 In the future I can add statistical pages showing ratings for each recipe, so that a 
 user can see statistics on the nutritional ratings for each recipe and the ratings
@@ -110,7 +113,7 @@ by date and type of recipe, etc.
 
 
 ## Technologies Used
---------------------
+
 
 * HTML 
 
@@ -179,7 +182,7 @@ to amend code in a testing environment in order to enhance the UX and functional
 
 
 ## Testing
-----------
+
 Testing was carried out by human beings.  The food Tech teacher at my school tested the app with her caribbean recipes and
 students were able to add and delete their own recipes to the app.
 
@@ -241,7 +244,6 @@ The app was tested on Samsung S8, Apple iPhone 6, Apple iPad Air 2 and also usin
 
 
 ## Interesting bugs or problems I discovered during testing
---------------------------------------------------------
 
 The most annoying bug I came across was when I was trying to push my code to heroku.  I followed
 the instructions above but got an error 500 after each attempt.  Despite looking at my code in detail I couldnt find
@@ -251,10 +253,9 @@ I was able to successfully push my code to heroku.
 
 
 ## Development process of my project
----------------------------------
 
 * I created a new workspace in my cloud9 account and chose a blank template.
-* I then imported flask using the terminal.  'sudo pip3 install flask'.
+* I then imported flask using the terminal.  `sudo pip3 install flask`
 * I created a static folder for my images and my styles.css files and a templates folder for my templates.
 * Next thing was to set up my base template html file and my app.py file. 
 * In my base html file I started with html boiler plate then added in the following command '{% block content %} {% endblock %}' so 
@@ -263,11 +264,38 @@ I was able to successfully push my code to heroku.
 * In my app.py file I imported all the modules I would need and then set up a secret key and set my debug to True so that I could get
   an error log if there was something wrong with my code I could sort it out with the help of the error log.  I also set up my secret 
   key as part of my cookie encryption.
+* At this point I pushed my app to heroku in readiness for the final push to heroku later on.  This meant I had to create my procifle 
+  and requirements file in order for the app to run.
+* I created my database in mlab.  This consisted of 3 collections:  1 for my recipes, 1 for the Caribbean islands and 1 for my users.
+  The recipe collection was used to hold details of all my recipes.  My caribbean island collection held the details of 21 Caribbean islands.
+  My user collection held the names and passwords of all users of the recipe app.  It was used to endure that only recipe authors
+  could edit their own recipes and also enabled users to login to the app.
+* I entered 8 recipes into my recipe collection,which consisted of 15 key values in json format.
+* I returned to my app.py page to connect my database to my app.  I entered the environment details in to my config.py file and
+  then put this in gitignore.
+* I then built my allrecipeslist page so that my recipes would display on the screen.  Initially I used accordian format from 
+  materializecss but then changed the display to cards on the advice of my mentor.  I checked that the allrecipeslist page worked,
+  and that summary information was displayed on the front of the card with a picture of the recipe, and on clicking on the three dot icon
+  on the right hand top side of the card, the flip side of the card would then be shown together with the ingredients and method for
+  making the recipe.
+* I then put together my addrecipes and editrecipes pages using addrecipes page as a template for my editrecipes page.
+* I checked that both my addrecipes and editrecipes pages worked ensuring that a user could add a recipe and only the author of the recipe
+  could edit a recipe.
+* I returned to my allrecipeslist page and put in a link to my islands collections so that users could find out more about
+  the island a recipe came from.  This involved building an island page which displayed a picture of the island, a picture of the map of
+  the caribbean and some information about the island.  Users checked that this worked.
+* Finally I build my findrecipe page.  This enabled a user to find a recipe which was either a lunch, dinner or dessert recipe, or to find a recipe which 
+  contained meat, fish, vegetables or sugar.  Users could also search for recipes which came from speificifed islands, or search for 
+  recipes which did not contain specified allergens.  As part of this I created a results page which displayed the results of each
+  search.
+* I then  created a login and register page.  The login page allowed registered users to access the app, and if a user was not registered, then
+  the register page enabled them to register.
+* Lastly I checked that the entire app worked before doing a final push to heroku, making sure that my environment variables were correctly
+  input into the heroku dashboard for the app.
 
 
 
 ## Deployment
--------------
 
 The following section describes the process to deploy this project to Heroku.
 
@@ -283,7 +311,7 @@ The following section describes the process to deploy this project to Heroku.
 * App was now deployed via Heroku
 
 ## Credits
-----------
+
 Content
 The text for the islands was copied from wikpaedia.
 
