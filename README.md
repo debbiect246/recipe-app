@@ -35,7 +35,7 @@ https://recipe-app-flask-mongo.herokuapp.com/
 ## Wireframes
 
 Wireframes were an integral part of the development process.  I designed these at the start of the project but as time went by they needed
-several revisions.  Click on the link [wireframe](recipe-app/UX/wireframe for caribbean recipe) to see the final versions of my wireframes are shown below.
+several revisions.  Click on the link [wireframe](../recipe-app/UX/wireframe for caribbean recipe) to see the final versions of my wireframes are shown below.
 
 
 ## Features
@@ -112,7 +112,7 @@ by date and type of recipe, etc.
 
 * HTML 
 
-(https://developer.mozilla.org/en-US/docs/Learn/HTML)
+[HTML](https://developer.mozilla.org/en-US/docs/Learn/HTML)
 Hypertext markup language is used to create the structure of web pages.  It consists of tags which tell the browser
 how to set out text and images on the page.  Hypertext is the method by which you move around on the web, markups are the tags
 which set out the structure of the webpage, thus HTML is a language for web creation with its own structure and syntax.  The data 
@@ -123,7 +123,7 @@ the website should look and information from this is used in each of the other t
 
 * CSS
 
-(https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS)
+[CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS)
 CSS stands for Cascading Style sheets which is a type of style language which sets out how the webpage should be styled.  It allows
 the user to style the webpage in a particular way, making the UX richer and more meaningful for the user.
 
