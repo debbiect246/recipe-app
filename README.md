@@ -184,6 +184,7 @@ students were able to add and delete their own recipes to the app.
 ### Manual Testing
 
 * Log in page:
+![Image of login page](https://github.com/debbiect246/recipe-app/blob/master/static/images/loginpage.jpg)
 
   Ensure that only registered users can login.  If an unregistered user tries to log in they are directed to the 
 register page.
