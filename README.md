@@ -159,7 +159,7 @@ I used Python version 3.7 to run my app.  Python is a high level programming lan
 flask, pyramid and django.  Python supports many programming paradigms and is object orientated and has a comprehensive set of libraries.
 Python is managed by a non profit organsation the Python software foundation.
 
-Mongodb
+* Mongodb
 
 [mongodb](https://mlab.com/)
 I used mongodb for my database.  Through pymongo (a module in python) I was able to connect my database to my flask app through the
@@ -291,7 +291,22 @@ occasions so that I could run my code.
   could edit their own recipes and also enabled users to login to the app.
 9. I created an admin user, creating a login and password in this format, noting this format as I would need it later to put in my
    config.py file  `mongodb://<dbuser>:<dbpassword>@XXXXXX.mlab.com:XXXXX/recipe_manager`
-10. I entered 8 recipes into my recipe collection,which consisted of 15 key values in json format.
+10. I entered 8 recipes into my recipe collection,which consisted of 15 key values in json format. 
+    Schema for my recipe collection:
+![recipe collection](https://github.com/debbiect246/recipe-app/blob/master/UX/recipeschema.jpg)
+    I entered 21 caribbean islands into my islands collection - the schema for this is below.
+    Schema for my islands collection:
+![login page](https://github.com/debbiect246/recipe-app/blob/master/UX/islandsschema.jpg)
+    Schema for my users collection is in json format as shown below.
+    ``` {
+    "_id": {
+        "$oid": "5cb433bdfb6fc037f0791287"
+    },
+    "username": "debbie",
+    "password": "debbie"
+    }```
+
+
 11. I returned to my app.py page to connect my database to my app.  I entered the environment details in to my config.py file and
     then put this in gitignore.
 12. I then built my allrecipeslist page so that my recipes would display on the screen.  Initially I used accordian format from 
