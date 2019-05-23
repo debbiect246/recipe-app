@@ -184,12 +184,13 @@ students were able to add and delete their own recipes to the app.
 ### Manual Testing
 
 * Log in page:
-![Image of login page](https://github.com/debbiect246/recipe-app/blob/master/static/images/loginpage.jpg)
+[login page](https://github.com/debbiect246/recipe-app/blob/master/static/images/loginpage.jpg)
 
   Ensure that only registered users can login.  If an unregistered user tries to log in they are directed to the 
 register page.
 
 * All recipes list page:
+[Recipe list page](https://github.com/debbiect246/recipe-app/blob/master/static/images/allrecipes.jpg)
 
 Click on All Recipes item in the menu and ensure that all recipes are shown.
 The name of the recipe, recommended type of recipe, recipe ingredients and allergens are shown on the front of 
