@@ -8,15 +8,15 @@ from werkzeug.security import generate_password_hash, check_password_hash
 
 app = Flask(__name__)
 app.secret_key = "randomstring123"
-app.config['DEBUG'] = False
+app.config['DEBUG'] = True
 
 if app.config['DEBUG'] == True:
     from config import dbconfig
     app.config["MONGO_DBNAME"] = 'recipe_manager'
     app.config["MONGO_URI"] = dbconfig()
 else:
+    
     app.config['MONGO_DBNAME'] = os.getenv('MONGO_DBNAME')
-    app.config['MONGO_URI'] = os.getenv('MONGO_URI')
 
 mongo = PyMongo(app)
 

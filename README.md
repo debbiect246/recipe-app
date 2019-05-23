@@ -14,7 +14,7 @@ from maybe encouraging a user to consider a visit to one of these lovely islands
 
 The app was deployed to heroku and can be accessed by clicking on this link 
 
-https://recipe-app-flask-mongo.herokuapp.com/
+[Caribbean Recipe App](https://recipe-app-flask-mongo.herokuapp.com/)
 
 ## UX
 
@@ -35,7 +35,7 @@ https://recipe-app-flask-mongo.herokuapp.com/
 ## Wireframes
 
 Wireframes were an integral part of the development process.  I designed these at the start of the project but as time went by they needed
-several revisions.  Click on the link [wireframe](https://github.com/debbiect246/recipe-app/blob/master/UX/wireframe.pdf) to see the final versions of my wireframes are shown below.
+several revisions.  Click on the link [wireframe](https://github.com/debbiect246/recipe-app/blob/master/UX/wireframe.pdf) to see the final versions of my wireframes.
 
 
 ## Features
@@ -91,11 +91,11 @@ for ease of use for each recipe.
 ## Features Left to Implement
 
 
-1. Authenticated user login.  Users identities could be che
+1. Authenticated user login.  Users identities could be checked using two factor authentication.
 
-2.  Statistics on ratings for each recipe.
+2.  Statistics on ratings for each recipe.  A ratings collection could be used for this.
 
-3.  Bar charts showing the number of calories in each recipe.
+3.  Bar charts showing the number of calories in each recipe.  This could be implemented using d3 and crossfilter.
 
 ## Another feature idea
 
