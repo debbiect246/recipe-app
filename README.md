@@ -179,18 +179,20 @@ to amend code in a testing environment in order to enhance the UX and functional
 ## Testing
 
 Testing was carried out by human beings.  The food Tech teacher at my school tested the app with her caribbean recipes and
-students were able to add and delete their own recipes to the app.
+students were able to add and edit their own recipes.  Details of testing done by testers on a page by page basis is shown
+below together with images of each page.
 
 ### Manual Testing
 
 * Log in page:
-![login page](https://github.com/debbiect246/recipe-app/blob/master/static/images/loginpage.jpg)
 
   Ensure that only registered users can login.  If an unregistered user tries to log in they are directed to the 
-register page.
+register page.  
+
+![login page](https://github.com/debbiect246/recipe-app/blob/master/static/images/imageofloginpage.jpg)
+
 
 * All recipes list page:
-![Recipe list page](https://github.com/debbiect246/recipe-app/blob/master/static/images/allrecipes.jpg)
 
 Click on All Recipes item in the menu and ensure that all recipes are shown.
 The name of the recipe, recommended type of recipe, recipe ingredients and allergens are shown on the front of 
@@ -199,6 +201,8 @@ involved in making the recipe.
 There is a link at the bottom of the reverse card which when clicked shows information about the recipe island
 together with a map of the caribbean.
 
+![Recipe list page](https://github.com/debbiect246/recipe-app/blob/master/static/images/imageofallrecipespage.jpg)
+
 
 * Add Recipe Page:
 
@@ -206,7 +210,9 @@ Go to the "Add Recipe" page.
 Try to submit the empty form and verify that the recipe will not submit without a RECIPE NAME.
 Try to submit the form without description and verify that the recipe will not submit without a RECIPE DESCRIPTION.
 Try to submit the form without Vegan selected and verify that an error message appears.
-My Recipes Page
+
+![Recipe list page](https://github.com/debbiect246/recipe-app/blob/master/static/images/imageofaddrecipepage.jpg)
+
 
 * Using the "Edit Recipe" button.
 
