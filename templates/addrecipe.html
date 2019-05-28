@@ -1,6 +1,10 @@
 {% extends 'base.html' %} {% block content %}
     <h1>Add Recipe</h1>
 <div class="row">
+    
+    <!-- created form for user to input new recipe -->
+    <!-- user adds recipe name first -->
+    
     <form action="{{ url_for('insert_recipe') }}" method="POST"  class="col s12">
         <div class="row">
             <div class="input-field col s12">
@@ -10,6 +14,7 @@
             </div>
         </div>
         
+        <!-- user selects main ingredient for recipe from dropdown list -->
         
         <div class="row">
             <div class="input-field col s3">
@@ -29,13 +34,16 @@
                 
             </div>
         
-        
+            <!-- user inputs recipe ingredients -->
+            
             <div class="input-field col s9">
                 <i class="material-icons prefix">shopping_basket</i>
                 <textarea name="recipe_ingredients" id="recipe_ingredients" class="materialize-textarea"></textarea>
                 <label for="recipe_ingredients">Recipe Ingredients</label>
             </div>
         </div>
+        
+        <!-- user can upload picture of recipe -->
         
         <div class="row">
             <div class="input-field col s3">
@@ -44,6 +52,7 @@
                 <label for="recipe_picture">Recipe url</label>
             </div>
         
+            <!-- user can now type in recipe method -->
         
             <div class="input-field col s9">
                 <i class="material-icons prefix">subject</i>
@@ -52,6 +61,8 @@
             </div>
         </div>
         
+            <!-- user types in recipe island comes from from dropdown list of caribbean islands-->
+            
         <div class="row">
             <div class="input-field col s3">
                 <i class="material-icons prefix">directions_boat</i>
@@ -81,7 +92,8 @@
                 <label for="recipe_island">Recipe island</label>
                 
             </div>
-        
+            
+            <!-- user types in their name as author of the recipe -->
         
             <div class="input-field col s9">
                 <i class="material-icons prefix">create</i>
@@ -89,6 +101,8 @@
                 <label for="recipe_author">Recipe Author</label>
             </div>
         </div>
+        
+        <!-- user types in the main allergent the recipe contains -->
         
         <div class="row">
             <div class="input-field col s3">
@@ -109,7 +123,9 @@
                 <label for="allergens">Allergens</label>
             </div>
         
-        
+            
+            <!-- user types in number of servings and nutritional information -->
+            
             <div class="input-field col s3">
                 <i class="material-icons prefix">short_text</i>
                 <textarea name="number_servings" id="number_servings" class="materialize-textarea"></textarea>
@@ -129,6 +145,8 @@
             </div>
             
         </div>
+        
+        <!-- user chooses from dropdown whether recipe is best eaten for lunch, dinner or dessert -->
         
         <div class="row">
             <div class="row">

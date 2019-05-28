@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />   
     <title>Caribbean Recipes</title>
 </head>
+
+<!-- displays login page and invites user to login background image set to caribbean recipe images -->
 <body class="bg-image">
   <div class="col s12 m4">
    
@@ -56,7 +58,8 @@
             {% endif %}
           {% endwith %}
         </div>
-        
+      
+      <!-- button to submit form -->  
       
       <div class="row">
         
@@ -67,7 +70,8 @@
       </div>
       
     </div>
-    
+  
+    <!-- user can register by using register link-->
     
     <a style="text-decoration: none;
     color: black;"class="font-color link-text" href="{{url_for('register')}}">Don't have an account? Register here</a>
