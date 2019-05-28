@@ -126,14 +126,14 @@ the website should look and information from this is used in each of the other t
 * CSS
 
 [CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS)
-CSS stands for Cascading Style sheets which is a type of style language which sets out how the webpage should be styled.  It allows
+stands for Cascading Style sheets which is a type of style language which sets out how the webpage should be styled.  It allows
 the user to style the webpage in a particular way, making the UX richer and more meaningful for the user.
 
 
 * Materializecss
 
 [Materialisecss](https://materializecss.com/)
-Naterializecss is a modern responsive framework developed by google.  It has built in classes which allow websites to
+is a modern responsive framework developed by google.  It has built in classes which allow websites to
 be responsive when viewed on any device.  It also has many components which enhance the appearance of a webpage, e.g. forms, icons,
 badges, buttons.  All these save the user time when desigining a website and enhance the UX.  It is also designed to speed up
 development time and is easy to use.  I used version 0.100.2 - the most stable version as advised by CI.
@@ -141,7 +141,7 @@ development time and is easy to use.  I used version 0.100.2 - the most stable v
 * Flask
 
 [Flask](flask.pocoo.org/)
-Flask is a microframework written in python.  Flask is therefore the "glue" that holds an application together.  Different types 
+is a microframework written in python.  Flask is therefore the "glue" that holds an application together.  Different types 
 of file can co-exist in a flask application, with the base template holding the HTML base code for other templates.  In addition
 flask provides security throught the wekzeug add in and the jinja templating language can also be used for markup on web pages.  
 
@@ -170,7 +170,7 @@ work with in Python and other programming languages.
 * Heroku 
 
 [heroku](https://www.heroku.com/)
-Heroku is a cloud platform that allows a developer to build, deliver, scale and monitor apps.  Heroku makes the experience of
+is a cloud platform that allows a developer to build, deliver, scale and monitor apps.  Heroku makes the experience of
 deploying an app relatively straightforward.  
 
 * Chrome Developer Tools
