@@ -55,7 +55,7 @@ def login():
                 return redirect(url_for('allrecipeslist',register_id = login_user["_id"]))
             else: # and if password is not correct
                flash("Incorrect password") 
-        else:# if not exist
+        else:# if user does not exist
             flash("User does not exist")
             return redirect(url_for('register'))
     return render_template('login.html')
@@ -72,7 +72,6 @@ def allrecipeslist():
 
 @app.route('/islands/<recipe_island>', methods=["GET","POST"])
 def islands(recipe_island):
-    print(recipe_island)
     this_island= mongo.db.islands.find_one({'recipe_island':recipe_island})
     return render_template('islands.html', this_island=this_island)
 
@@ -81,13 +80,17 @@ def islands(recipe_island):
 @app.route("/addrecipe")
 def addrecipe():
     recipes = mongo.db.recipes.find()
-    return render_template("addrecipe.html", recipes=recipes) 
+    if session:
+        session['message'] = "Your recipe has been added to the recipes collection"
+    return render_template("addrecipe.html", recipes=recipes)
+    
     
 @app.route('/insert_recipe', methods=['POST'])
 def insert_recipe():
     recipes = mongo.db.recipes
     recipes.insert_one(request.form.to_dict())
     return redirect(url_for('allrecipeslist'))
+    
 
 #route for edit recipe page
 
