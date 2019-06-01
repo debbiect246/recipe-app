@@ -135,7 +135,7 @@ be responsive when viewed on any device.  It also has many components which enha
 badges, buttons.  All these save the user time when desigining a website and enhance the UX.  It is also designed to speed up
 development time and is easy to use.  I used version 0.100.2 - the most stable version as advised by CI.
 
-*[Flask](flask.pocoo.org/)
+*[Flask](http://flask.pocoo.org/)
 
 is a microframework written in python.  Flask is therefore the "glue" that holds an application together.  Different types 
 of file can co-exist in a flask application, with the base template holding the HTML base code for other templates.  In addition
@@ -159,7 +159,7 @@ use of appropriate environment variables.  Mongodb is a document database that p
 read, update and delete documents in a database.  Mongodb documents are stored in  collections in json or bson format and this makes it easy to 
 work with in Python and other programming languages.
 
-*[Heroku](https://www.heroku.com/)
+*[Heroku](https://en.wikipedia.org/wiki/Heroku)
 
 Heroku is a cloud platform that allows a developer to build, deliver, scale and monitor apps.  Heroku makes the experience of
 deploying an app relatively straightforward.  
@@ -174,7 +174,7 @@ to amend code in a testing environment in order to enhance the UX and functional
 
 Testing was carried out by human beings.  The food Tech teacher at my school tested the app with her caribbean recipes and
 students were able to add and edit their own recipes.  Details of testing done by testers on a page by page basis is shown
-below together with images of each page.
+below together with images of each page.  I also tested the app.
 
 ### Manual Testing
 
