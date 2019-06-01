@@ -137,9 +137,14 @@ development time and is easy to use.  I used version 0.100.2 - the most stable v
 
 *[Flask](http://flask.pocoo.org/)
 
-is a microframework written in python.  Flask is therefore the "glue" that holds an application together.  Different types 
+Flask is a microframework written in python.  Flask is therefore the "glue" that holds an application together.  Different types 
 of file can co-exist in a flask application, with the base template holding the HTML base code for other templates.  In addition
-flask provides security throught the wekzeug add in and the jinja templating language can also be used for markup on web pages.  
+flask provides security throught the wekzeug add in and the jinja templating language can also be used for markup on web pages. 
+
+[Jinja2](http://jinja.pocoo.org/docs/2.10/),
+Jinja 2 is a templating language which is used for rendering data in html templates and is used for communication between
+the front end and back end of an app.
+  
 
 *[jquery](https://jquery.com/)
 
@@ -319,7 +324,7 @@ occasions so that I could run my code.
 17. I then  created a login and register page.  The login page allowed registered users to access the app, and if a user was not registered, then
     the register page enabled them to register.
 18. Lastly I checked that the entire app worked before doing a final push to heroku, making sure that my environment variables were correctly
-    input into the heroku dashboard for the app.
+    input into the heroku dashboard for the app and that debug was set to false so that the app was se
 19.  My mentor had a look at my project and advised some changes, so I needed to set debug to true in my cloud9 editor whilst I made these
     changes, then I needed to remember to set debug back to false before pushing to heroku again.
 
