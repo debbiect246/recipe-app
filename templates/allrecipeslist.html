@@ -1,11 +1,14 @@
 {% extends 'base.html' %}
 {% block content %} 
 
+<!-- welcome message -->
 <div class="row">
     <br>
     <h4 class="center">Welcome!</h4>
     <h5 class="center">Delicious authentic recipes from the Caribbean</h5>
 </div>
+
+<!-- loop to display each recipe on a separate card -->
 
 {% for r in recipes %}
     
@@ -21,7 +24,7 @@
     
           <div class="card-content col s8">
             <span class="card-title activator grey-text text-darken-4"><strong>{{r.recipe_name}}</strong><i class="material-icons right">more_vert</i></span>
-            <p><a href="#">This recipe is best eaten for {{r.recipe_type}}</a></p>
+            <p>This recipe is best eaten for {{r.recipe_type}}</p>
             <p>This recipe contains these allergens <strong>{{r.allergens}}</strong></p
             <p>This recipe makes {{r.number_servings}} servings and each serving has {{r.calories_per_serve}} calories.</p>
             <p>{{r.protein_grammes_per_serve}} grammes of protein,</p>
@@ -38,14 +41,16 @@
           
           <p class="col s6">Ingredients needed for this recipe.  {{r.recipe_ingredients}}</p>
           <p>Here's how you make {{r.recipe_name}}.  {{r.method}}</p>
-          
+        
+        <!-- button for more info on recipe island -->  
       
           <p>This recipe comes from the Caribbean island of {{r.recipe_island}}</p>
           
           <div>
-          <a href={{url_for('islands', recipe_island=r.recipe_island  )}}>More Information on this Island</a>
+          <a href="{{url_for('islands', recipe_island=r.recipe_island)}}" class="waves-effect waves-light btn btn_medium green">Info on this Island</a>
+        
+        <!-- button for edit recipe -->
       
-          
           <a href="{{url_for('editrecipe', recipe_id=r._id, username=r.recipe_author)}}" class="waves-effect waves-light btn btn_small blue">Edit Recipe</a>
           </div>
    

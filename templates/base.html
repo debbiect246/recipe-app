@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
+    <!-- links to font awesome and style sheet -->
     
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
@@ -22,24 +23,21 @@
         <nav class="navigation">
             <ul>
                 <li><a href="{{ url_for('index') }}">Log out</a></li>
-                <li><a href="{{ url_for('allrecipeslist') }}">All Recipes</a></li>
-
                 <li><a href="{{ url_for('addrecipe') }}">Add Recipe</a></li>
                 <li><a href="{{ url_for('findrecipe')}}">Find Recipe</a></li>
-               
-                
-            
-            
+                <li><a href="{{ url_for('allrecipeslist') }}">All Recipes</a></li>
             </ul>
         </nav>
     </div>
     
     {% block content %} {% endblock %}
     
+    <!-- links to jquery and materializecss -->
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     
-    
+    <!-- jquery to activate buttons -->
     
     <script type="text/javascript">
         $(document).ready(function () {
@@ -47,9 +45,7 @@
             $('select').material_select();
         });
     </script>
-    
-    
-</body>
 
+</body>
 
 </html>
