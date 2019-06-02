@@ -80,8 +80,6 @@ def islands(recipe_island):
 @app.route("/addrecipe")
 def addrecipe():
     recipes = mongo.db.recipes.find()
-    if session:
-        session['message'] = "Your recipe has been added to the recipes collection"
     return render_template("addrecipe.html", recipes=recipes)
     
     
@@ -89,6 +87,7 @@ def addrecipe():
 def insert_recipe():
     recipes = mongo.db.recipes
     recipes.insert_one(request.form.to_dict())
+    flash("your recipe has been inserted")
     return redirect(url_for('allrecipeslist'))
     
 

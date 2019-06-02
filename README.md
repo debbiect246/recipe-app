@@ -112,7 +112,7 @@ by date and type of recipe, etc.
 ## Technologies Used
 
 
-*[HTML](https://developer.mozilla.org/en-US/docs/Learn/HTML)
+[HTML](https://developer.mozilla.org/en-US/docs/Learn/HTML)
 
 Hypertext markup language is used to create the structure of web pages.  It consists of tags which tell the browser
 how to set out text and images on the page.  Hypertext is the method by which you move around on the web, markups are the tags
@@ -122,57 +122,59 @@ in HTML.  There is a template for adding, deleting, editing and adding recipes a
 each island.  The base template sets out the way in which
 the website should look and information from this is used in each of the other templates.
 
-*[CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS)
+[CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS)
 
 stands for Cascading Style sheets which is a type of style language which sets out how the webpage should be styled.  It allows
 the user to style the webpage in a particular way, making the UX richer and more meaningful for the user.
 
 
-*[Materialisecss](https://materializecss.com/)
+[Materialisecss](https://materializecss.com/)
 
 is a modern responsive framework developed by google.  It has built in classes which allow websites to
 be responsive when viewed on any device.  It also has many components which enhance the appearance of a webpage, e.g. forms, icons,
 badges, buttons.  All these save the user time when desigining a website and enhance the UX.  It is also designed to speed up
 development time and is easy to use.  I used version 0.100.2 - the most stable version as advised by CI.
 
-*[Flask](http://flask.pocoo.org/)
+[Flask](http://flask.pocoo.org/)
 
 Flask is a microframework written in python.  Flask is therefore the "glue" that holds an application together.  Different types 
 of file can co-exist in a flask application, with the base template holding the HTML base code for other templates.  In addition
 flask provides security throught the wekzeug add in and the jinja templating language can also be used for markup on web pages. 
 
-[Jinja2](http://jinja.pocoo.org/docs/2.10/),
+[Jinja2](http://jinja.pocoo.org/docs/2.10/)
+
 Jinja 2 is a templating language which is used for rendering data in html templates and is used for communication between
 the front end and back end of an app.
   
 
-*[jquery](https://jquery.com/)
+[jquery](https://jquery.com/)
 
 jquery is used to simplify DOM manipulation.  Jquery is a javascript library that is used to provide interactivity
 on websites.  The $ sign signals to the browser that jquery is being used.
 
-*[python](https://www.python.org/)
+[python](https://www.python.org/)
 
 I used Python version 3.7 to run my app.  Python is a high level programming language used for apps in many frameworks such as 
 flask, pyramid and django.  Python supports many programming paradigms and is object orientated and has a comprehensive set of libraries.
 Python is managed by a non profit organsation the Python software foundation.
 
-*[mongodb](https://mlab.com/)
+[mongodb](https://mlab.com/)
 
 I used mongodb for my database.  Through pymongo (a module in python) I was able to connect my database to my flask app through the
 use of appropriate environment variables.  Mongodb is a document database that provides the user with the facility to create,
 read, update and delete documents in a database.  Mongodb documents are stored in  collections in json or bson format and this makes it easy to 
 work with in Python and other programming languages.
 
-*[Heroku](https://en.wikipedia.org/wiki/Heroku)
+[Heroku](https://en.wikipedia.org/wiki/Heroku)
 
 Heroku is a cloud platform that allows a developer to build, deliver, scale and monitor apps.  Heroku makes the experience of
 deploying an app relatively straightforward.  
 
-*[Chrome Developer Tools](https://developers.google.com/web/tools/chrome-devtools/)
+[Chrome Developer Tools](https://developers.google.com/web/tools/chrome-devtools/)
 
 I used chrome developer tools to work on my code.  Chrome dev tools are a set of tools designed to give the developer tools
-to amend code in a testing environment in order to enhance the UX and functionality experience. 
+to amend code in a testing environment in order to enhance the UX and functionality experience.  I was also able to test the 
+responsiveness of my app using these tools.
 
 
 ## Testing
