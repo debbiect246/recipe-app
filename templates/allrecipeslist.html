@@ -6,6 +6,16 @@
     <br>
     <h4 class="center">Welcome!</h4>
     <h5 class="center">Delicious authentic recipes from the Caribbean</h5>
+    
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul class=flashes>
+          {% for message in messages %}
+              <li>{{ message }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
 </div>
 
 <!-- loop to display each recipe on a separate card -->
@@ -58,5 +68,7 @@
   </div>
   
 {% endfor %}
+
+
   
 {% endblock %}

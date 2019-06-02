@@ -181,9 +181,15 @@
                     <textarea name="carb_grammes_per_serve" id="carb_grammes_per_serve" class="materialize-textarea"></textarea>
                     <label for="">Carb grammes per serving</label>
                 </div>
-                
-                
-                
+                {% with messages = get_flashed_messages() %}
+                  {% if messages %}
+                      <ul class=flashes>
+                           {% for message in messages %}
+                              <li>{{ message }}</li>
+                           {% endfor %}
+                       </ul>
+                  {% endif %}
+                {% endwith %}
             </div>
         
         <!-- button for submitting recipe once recipe details have been entered -->
@@ -195,7 +201,6 @@
                 <i class="material-icons right">playlist_add</i>
              </button>
         </div>
-        
         
     </form>
     

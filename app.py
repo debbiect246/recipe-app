@@ -87,7 +87,7 @@ def addrecipe():
 def insert_recipe():
     recipes = mongo.db.recipes
     recipes.insert_one(request.form.to_dict())
-    flash("your recipe has been inserted")
+    flash ("Your recipe has been inserted")
     return redirect(url_for('allrecipeslist'))
     
 
