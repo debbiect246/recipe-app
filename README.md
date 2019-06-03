@@ -94,6 +94,10 @@ for ease of use for each recipe.
 1. Authenticated user login.  Users identities could be checked using two factor authentication. This could be implemented in 
    django or another python framework.
 
+2.  Ensuring that duplicate recipes cannot be added to the database; an error message to flash up if a user attempts to add a 
+    duplicate recipe - this would need for all 15 fields to be checked after recipe was submitted to see if any of the recipes
+    in the database are an exact match for the recipe being entered. 
+
 2.  Statistics on ratings for each recipe.  A ratings collection could be used for this. The ratings could be implemented using
     a number of technologies including crossfilter and matlab.
 
@@ -307,7 +311,7 @@ occasions so that I could run my code.
 
 
 11. I returned to my app.py page to connect my database to my app.  I entered the environment details in to my config.py file and
-    then put this in gitignore.
+    then put this in gitignore.  I also created my procfile and my requirements.txt file.
 12. I then built my allrecipeslist page so that my recipes would display on the screen.  Initially I used accordian format from 
     materializecss but then changed the display to cards on the advice of my mentor.  I checked that the allrecipeslist page worked,
     and that summary information was displayed on the front of the card with a picture of the recipe, and on clicking on the three dot icon
@@ -326,9 +330,10 @@ occasions so that I could run my code.
 17. I then  created a login and register page.  The login page allowed registered users to access the app, and if a user was not registered, then
     the register page enabled them to register.
 18. Lastly I checked that the entire app worked before doing a final push to heroku, making sure that my environment variables were correctly
-    input into the heroku dashboard for the app and that debug was set to false so that the app was se
+    input into the heroku dashboard for the app and that debug was set to false so that the app was secure.
 19.  My mentor had a look at my project and advised some changes, so I needed to set debug to true in my cloud9 editor whilst I made these
     changes, then I needed to remember to set debug back to false before pushing to heroku again.
+20.  Finally I created a favicon for my app, using a [freefavicom creator](https://www.freefavicon.com/freefavicons/)
 
 
 
@@ -355,11 +360,12 @@ The text for the islands was copied from wikpaedia.
 
 Media
 The photos used in this site were obtained from pixabay and pixels. 
-All the photos used in my database were obtained from google images.
+All the photos used in my database were obtained from google images.  These do not require creditation as they 
+are used for educational purposes only. 
 
 Acknowledgements
 I received inspiration for this project from my mentor Simen Daehlin, fellow students especially Jo Wings,
 Miro, John Lynch and John Longatty.  Family, friends and my teaching colleagues and school students were also very helpful 
-in giving me feedback.  I used pymongo documentation to help me get my code correct.
+in giving me feedback.  I used pymongo and flask documentation to help me get my code correct.
 
 

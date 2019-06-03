@@ -2,10 +2,12 @@
 {% extends 'base.html' %}
 {% block content %} 
 
+
 <div class="row">
     <h2>The Caribbean Island for this recipe is {{this_island.recipe_island}}</h2>
 </div>
 
+<!--  code to pick up island information from island database and render it to screen -->
 
     <div class="row">
         <img src="{{this_island.island_url}}" class="islandphoto" alt="island photo">
@@ -17,18 +19,12 @@
          <p class="center"> In {{this_island.recipe_island}} the main language(s) is/are {{this_island.island_languages}}</p>
     </div>  
     
+    <!-- code to show map of caribbean underneath map of island and info about island -->
+    
     <div class="row">
         <p class="center">The map below shows all of the caribbean area</p>
         <img src="/static/images/americascaribbean.jpg"  class="map" alt="Caribbean map">
     </div>
         
-    
-         
-    
-    
-     
 
-
-    
-    
 {% endblock %}
