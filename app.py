@@ -8,7 +8,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 
 app = Flask(__name__)
 app.secret_key = "randomstring123"
-app.config['DEBUG'] = True
+app.config['DEBUG'] = False
 
 if app.config['DEBUG'] == True:
     from config import dbconfig
